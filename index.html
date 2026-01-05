@@ -63,26 +63,29 @@
             margin: 0 auto;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-green);
-            text-shadow: 0 0 10px var(--glow-green);
-        }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .logo-icon {
-    width: 30px;
-    height: 30px;
+    width: 42px;
+    height: auto;
+    background: none;
     box-shadow: none;
+    border-radius: 0;
     animation: none;
+    display: flex;
+    align-items: center;
 }
 
 .logo-icon img {
-    width: 18px;
+    width: 42px;
+    height: auto;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 170, 0.4));
 }
+
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
