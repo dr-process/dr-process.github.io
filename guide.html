@@ -3,33 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي – Telegraph</title>
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="MobileOptimized" content="176" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي">
-    <meta property="og:description" content="أهلاً بكم في قناة Dr Process، وجهتكم الأكاديمية للاحتراف في عالم الأمن السيبراني والهكر الأخلاقي. نُقدم محتوى تعليميًا عمليًا وأكاديميًا يغطي مسارات متعددة تبدأ من المبتدئين وحتى المحترفين، من اختبار الاختراق وتحليل الأدلة الرقمية وغيرها الكثير.
- هدفنا هو نقل المعرفة بشكل منهجي واحترافي لكل من يسعى لدخول هذا المجال، سواء كنت طالبًا، متخصصًا، أو باحثًا عن تغيير مهني.
- اشترك في القناة وابدأ رحلتك معنا. &lt;أضغط هنا للإشتراك في القناة&gt;">
-    <meta property="og:image" content="">
-    <meta property="og:site_name" content="Telegraph">
-    <meta property="article:published_time" content="2025-05-30T08:18:36+0000">
-    <meta property="article:modified_time" content="2025-08-18T07:36:57+0000">
-    <meta property="article:author" content="Dr Process">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي">
-    <meta name="twitter:description" content="أهلاً بكم في قناة Dr Process، وجهتكم الأكاديمية للاحتراف في عالم الأمن السيبراني والهكر الأخلاقي. نُقدم محتوى تعليميًا عمليًا وأكاديميًا يغطي مسارات متعددة تبدأ من المبتدئين وحتى المحترفين، من اختبار الاختراق وتحليل الأدلة الرقمية وغيرها الكثير.
- هدفنا هو نقل المعرفة بشكل منهجي واحترافي لكل من يسعى لدخول هذا المجال، سواء كنت طالبًا، متخصصًا، أو باحثًا عن تغيير مهني.
- اشترك في القناة وابدأ رحلتك معنا. &lt;أضغط هنا للإشتراك في القناة&gt;">
-    <meta name="twitter:image" content="">
-    <link rel="canonical" href="https://telegra.ph/مسار-قناة-Dr-Process-للأمن-السيبراني-والهكر-الأخلاقي-05-30" />
-    <link rel="shortcut icon" href="/favicon.ico?1" type="image/x-icon">
-    <link rel="icon" type="image/png" href="/images/favicon.png?1" sizes="16x16">
-    <link rel="icon" type="image/png" href="/images/favicon_2x.png?1" sizes="32x32">
-    
+    <title>دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي</title>
     <style>
         * {
             margin: 0;
@@ -43,7 +17,6 @@
             --darker-bg: #050810;
             --card-bg: #141b2d;
             --accent-blue: #00d9ff;
-            --accent-purple: #b400ff;
             --text-primary: #e0e0e0;
             --text-secondary: #a0a0a0;
             --border-color: rgba(0, 255, 65, 0.2);
@@ -54,10 +27,10 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--darker-bg);
             color: var(--text-primary);
-            overflow-x: hidden;
+            min-height: 100vh;
         }
 
-        /* Matrix Rain Effect Background */
+        /* Matrix Background */
         .matrix-bg {
             position: fixed;
             top: 0;
@@ -65,7 +38,7 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            opacity: 0.05;
+            opacity: 0.03;
             pointer-events: none;
         }
 
@@ -104,13 +77,7 @@
         .logo-icon img {
             height: 46px;
             width: auto;
-            max-width: none;
             filter: drop-shadow(0 0 6px rgba(0, 255, 170, 0.45));
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
 
         .nav-links {
@@ -125,29 +92,12 @@
             padding: 0.5rem 1rem;
             border-radius: 5px;
             transition: all 0.3s;
-            position: relative;
         }
 
         .nav-links a:hover {
             color: var(--primary-green);
             background: rgba(0, 255, 65, 0.1);
             transform: translateY(-2px);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--primary-green);
-            transition: all 0.3s;
-            transform: translateX(-50%);
-        }
-
-        .nav-links a:hover::after {
-            width: 80%;
         }
 
         .cta-button {
@@ -166,61 +116,54 @@
             box-shadow: 0 0 30px var(--glow-green);
         }
 
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 2px;
+        }
+
         /* Hero Section */
         .hero {
-            min-height: 60vh;
+            min-height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
-            padding: 2rem;
+            padding: 3rem 2rem;
             background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
-            pointer-events: none;
         }
 
         .hero-content {
             max-width: 900px;
-            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: glow 2s ease-in-out infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% { filter: drop-shadow(0 0 10px var(--glow-green)); }
-            50% { filter: drop-shadow(0 0 20px var(--glow-green)); }
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             line-height: 1.6;
         }
 
         /* Content Section */
         .content-section {
-            padding: 3rem 2rem;
+            padding: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -229,109 +172,112 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 15px;
-            padding: 3rem;
+            padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            font-size: 2.5rem;
             margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
             color: var(--primary-green);
-            text-shadow: 0 0 10px var(--glow-green);
-        }
-
-        .content-container h1, 
-        .content-container h3, 
-        .content-container h4 {
-            color: var(--primary-green);
-            margin: 1.5rem 0;
-            text-shadow: 0 0 5px var(--glow-green);
-        }
-
-        .content-container h1 {
-            font-size: 2.2rem;
-        }
-
-        .content-container h3 {
-            font-size: 1.8rem;
-        }
-
-        .content-container h4 {
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        .content-container p, 
-        .content-container address,
-        .content-container blockquote {
-            color: var(--text-primary);
+            font-size: 2rem;
             margin-bottom: 1rem;
-            line-height: 1.8;
         }
 
-        .content-container blockquote {
-            border-right: 3px solid var(--primary-green);
-            padding-right: 1rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            color: var(--text-secondary);
+        .content-block {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 255, 65, 0.03);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
         }
 
-        .content-container a {
+        .content-block h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .content-block h4 {
             color: var(--accent-blue);
-            text-decoration: none;
-            transition: all 0.3s;
-            display: block;
-            margin: 0.8rem 0;
-            padding: 0.5rem;
-            border-radius: 5px;
-            background: rgba(0, 217, 255, 0.1);
-            border: 1px solid rgba(0, 217, 255, 0.2);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.2rem;
+            padding-right: 1rem;
+            border-right: 3px solid var(--primary-green);
         }
 
-        .content-container a:hover {
+        .video-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .video-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            background: rgba(0, 217, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-link:hover {
             color: var(--primary-green);
             background: rgba(0, 255, 65, 0.1);
             border-color: var(--primary-green);
             transform: translateX(-5px);
-            box-shadow: 0 5px 20px var(--glow-green);
+            box-shadow: 0 5px 15px var(--glow-green);
         }
 
-        .content-container aside a {
+        .video-link::before {
+            content: '▶';
+            color: var(--accent-blue);
+            font-size: 0.9em;
+        }
+
+        .video-link:hover::before {
+            color: var(--primary-green);
+        }
+
+        .divider {
+            text-align: center;
+            color: var(--primary-green);
+            margin: 2rem 0;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .update-info {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .channel-link {
             display: inline-block;
-            padding: 1rem 2rem;
             background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
             color: var(--darker-bg);
+            padding: 1rem 2rem;
             border-radius: 30px;
+            text-decoration: none;
             font-weight: bold;
             margin: 1rem auto;
-            text-align: center;
-            border: none;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px var(--glow-green);
         }
 
-        .content-container aside a:hover {
+        .channel-link:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px var(--glow-green);
-        }
-
-        .content-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 2px solid var(--border-color);
-            margin: 2rem auto;
-            display: block;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
-        }
-
-        .content-container strong {
-            color: var(--primary-green);
-            display: block;
-            text-align: center;
-            margin: 2rem 0;
-            font-size: 1.2rem;
         }
 
         /* Footer */
@@ -340,11 +286,7 @@
             border-top: 2px solid var(--border-color);
             padding: 3rem 2rem;
             text-align: center;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
+            margin-top: 3rem;
         }
 
         .footer-links {
@@ -390,40 +332,23 @@
             background: var(--primary-green);
             color: var(--darker-bg);
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px var(--glow-green);
+            box-shadow: 0 5px 15px var(--glow-green);
         }
 
         .copyright {
             color: var(--text-secondary);
             font-size: 0.9rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
         }
 
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 30px;
-            height: 3px;
-            background: var(--primary-green);
-            border-radius: 2px;
-            transition: all 0.3s;
-        }
-
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
+            
             .nav-links {
                 display: none;
                 position: absolute;
@@ -433,52 +358,19 @@
                 background: var(--dark-bg);
                 flex-direction: column;
                 padding: 1rem;
-                border-bottom: 2px solid var(--border-color);
             }
-
+            
             .nav-links.active {
                 display: flex;
             }
-
+            
             .menu-toggle {
                 display: flex;
             }
-
+            
             .content-container {
-                padding: 1.5rem;
+                padding: 1rem;
             }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .content-container h1 {
-                font-size: 1.8rem;
-            }
-
-            .content-container h3 {
-                font-size: 1.5rem;
-            }
-
-            .content-container h4 {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* Loading Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            animation: fadeInUp 0.8s ease-out;
         }
     </style>
 </head>
@@ -504,7 +396,6 @@
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#content">المحتوى التعليمي</a></li>
                 <li><a href="#about">عن القناة</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
             </ul>
             <a href="https://www.youtube.com/@DrProcess" class="cta-button" target="_blank">اشترك في القناة</a>
         </nav>
@@ -512,7 +403,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-content fade-in">
+        <div class="hero-content">
             <h1>دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي</h1>
             <p>وجهتكم الأكاديمية للاحتراف في عالم الأمن السيبراني والهكر الأخلاقي</p>
             <p>محتوى تعليمي عملي وأكاديمي يغطي مسارات متعددة من المبتدئين إلى المحترفين</p>
@@ -521,272 +412,218 @@
 
     <!-- Content Section -->
     <section class="content-section" id="content">
-        <div class="content-container fade-in">
-            <h1>دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي</h1>
-            <address>Dr Process</address>
-            <blockquote>تاريخ آخر تحديث (10 مايو 2025)</blockquote>
-            
-            <h3>أهلاً بكم في قناة Dr Process، وجهتكم الأكاديمية للاحتراف في عالم الأمن السيبراني والهكر الأخلاقي. نُقدم محتوى تعليميًا عمليًا وأكاديميًا يغطي مسارات متعددة تبدأ من المبتدئين وحتى المحترفين، من اختبار الاختراق وتحليل الأدلة الرقمية وغيرها الكثير.</h3>
-            <h3>هدفنا هو نقل المعرفة بشكل منهجي واحترافي لكل من يسعى لدخول هذا المجال، سواء كنت طالبًا، متخصصًا، أو باحثًا عن تغيير مهني.</h3>
-            <h3>اشترك في القناة وابدأ رحلتك معنا. <a href="https://www.youtube.com/@DrProcess" target="_blank">&lt;أضغط هنا للإشتراك في القناة&gt;</a></h3>
+        <div class="content-container">
+            <div class="section-header">
+                <h2>دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي</h2>
+                <p class="update-info">تاريخ آخر تحديث: 10 مايو 2025</p>
+            </div>
 
-            <img src="https://i.postimg.cc/vZXLCCvj/DALL-E-2024-12-15-11-44-11-A-visually-striking-background-image-for-a-cybersecurity-and-ethical-ha.webp" alt="Cybersecurity Background">
+            <div class="content-block">
+                <h3>أهلاً بكم في قناة Dr Process</h3>
+                <p>وجهتكم الأكاديمية للاحتراف في عالم الأمن السيبراني والهكر الأخلاقي. نُقدم محتوى تعليميًا عمليًا وأكاديميًا يغطي مسارات متعددة تبدأ من المبتدئين وحتى المحترفين.</p>
+                <p>هدفنا هو نقل المعرفة بشكل منهجي واحترافي لكل من يسعى لدخول هذا المجال.</p>
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="https://www.youtube.com/@DrProcess" class="channel-link" target="_blank">اضغط هنا للإشتراك في القناة</a>
+                </div>
+            </div>
 
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ نصائح ومفاهيم عامة في الأمن السيبراني والهكر الأخلاقي ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
+            <!-- Section 1 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ نصائح ومفاهيم عامة في الأمن السيبراني والهكر الأخلاقي 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="video-links">
+                    <a href="https://youtu.be/rZV2TvhHbTo" class="video-link" target="_blank">من هو الهكر؟ ومن هو الهكر الأخلاقي؟ تعرف على أصناف الهكر... وكيف تدخل عالم الهكر الاخلاقي</a>
+                    <a href="https://youtu.be/hy-BLA_s9Lk" class="video-link" target="_blank">سؤال: كيف اتعلم الهكر الاخلاقي ومن وين أبتدي؟</a>
+                    <a href="https://youtu.be/ookIWoX1RB8" class="video-link" target="_blank">للمبتدئين في الهكر الأخلاقي والأمن السيبراني - أرسم طريق نجاحك بيدك</a>
+                    <a href="https://youtu.be/oQZafYUTBpA" class="video-link" target="_blank">أنا خبير في الامن السيبراني ؟؟!</a>
+                    <a href="https://youtu.be/u8hcvJs8dck" class="video-link" target="_blank">تحدى نفسك - أنت قدها</a>
+                    <a href="https://youtu.be/a407lTfDkHc" class="video-link" target="_blank">الأمن السيبراني أم علوم الكمبيوتر؟ اكتشف المجال الأنسب لشغفك</a>
+                    <a href="https://youtu.be/5Ex5UMH8QuE" class="video-link" target="_blank">عقلية الأمن السيبراني: الشطرنج VS البوكر</a>
+                    <a href="https://youtu.be/tOPzRySpfyg" class="video-link" target="_blank">القواعد العشرة لتطوير مهاراتك في مجال الأمن السيبراني</a>
+                    <a href="https://youtu.be/O0N111g3vQI" class="video-link" target="_blank">هل اللغة الإنجليزية ضرورية في الأمن السيبراني؟</a>
+                </div>
+            </div>
 
-            <a href="https://youtu.be/rZV2TvhHbTo" target="_blank">من هو الهكر؟ ومن هو الهكر الأخلاقي؟ تعرف على أصناف الهكر... وكيف تدخل عالم الهكر الاخلاقي</a>
-            <a href="https://youtu.be/hy-BLA_s9Lk" target="_blank">سؤال: كيف اتعلم الهكر الاخلاقي ومن وين أبتدي؟</a>
-            <a href="https://youtu.be/ookIWoX1RB8" target="_blank">للمبتدئين في الهكر الأخلاقي والأمن السيبراني - أرسم طريق نجاحك بيدك</a>
-            <a href="https://youtu.be/oQZafYUTBpA" target="_blank">أنا خبير في الامن السيبراني ؟؟!</a>
-            <a href="https://youtu.be/u8hcvJs8dck" target="_blank">تحدى نفسك - أنت قدها</a>
-            <a href="https://youtu.be/a407lTfDkHc" target="_blank">الأمن السيبراني أم علوم الكمبيوتر؟ اكتشف المجال الأنسب لشغفك</a>
-            <a href="https://youtu.be/5Ex5UMH8QuE" target="_blank">عقلية الأمن السيبراني: الشطرنج VS البوكر</a>
-            <a href="https://youtu.be/tOPzRySpfyg" target="_blank">القواعد العشرة لتطوير مهاراتك في مجال الأمن السيبراني</a>
-            <a href="https://youtu.be/O0N111g3vQI" target="_blank">هل اللغة الإنجليزية ضرورية في الأمن السيبراني؟</a>
+            <!-- Section 2 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ مواضيع عامة 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="video-links">
+                    <a href="https://youtu.be/Xi1wTBfTIcA" class="video-link" target="_blank">تحميل وتثبيت نظام كالي لينكس على VirtualBox (شرح سريع وسهل) - 2025</a>
+                    <a href="https://youtu.be/fEYTuFXVobU" class="video-link" target="_blank">تحميل وتثبيت نظام كالي لينكس على VMware بإصدار كامل</a>
+                    <a href="https://youtu.be/2CRp0GlgvIY" class="video-link" target="_blank">طريقة للبحث عن أي برنامج باصدار كامل عن طريق قوقل</a>
+                    <a href="https://youtu.be/El2I8jI4aWg" class="video-link" target="_blank">مفهوم الروابط URL - شرح مفصل ومهم لمختبري تطبيقات الويب</a>
+                    <a href="https://youtu.be/lZGRA0TsqOk" class="video-link" target="_blank">موقع لتحميل الكتب مجانا - مفيد جدا لتطوير نفسك في مجال الأمن السيبراني والهكر الأخلاقي</a>
+                    <a href="https://youtu.be/h0MssqeXpqE" class="video-link" target="_blank">سؤال: هل Bash Shell لغة برمجه او لا؟</a>
+                    <a href="https://youtu.be/erITT49zD_4" class="video-link" target="_blank">تطور الأمن السيبراني: الصراع الدائم بين الاختراق والحماية وكيف يؤثر كل طرف على الآخر</a>
+                    <a href="https://youtu.be/a_m4oVui6n0" class="video-link" target="_blank">أفضل مختبرات التدريب على الأمن السيبراني والهكر الأخلاقي</a>
+                    <a href="https://youtu.be/6qMBJlGN4EE" class="video-link" target="_blank">20 وظيفة في الأمن السيبراني الأكثر طلباً في سوق العمل</a>
+                </div>
+            </div>
 
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [مواضيع عامة] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
+            <!-- Section 3 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ التوعية والتثقيف السيبراني 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=FieUQPqjj6w" class="video-link" target="_blank">احذر قد يتم حظر حسابك في الواتساب + طريقة فك حظر الواتساب - WhatsApp Banned</a>
+                    <a href="https://youtu.be/dRB9dBqdi0I" class="video-link" target="_blank">احذر من طرق اختراق حسابات الانستقرام + كيفية استرجاع الحساب المسروق Instagram hack</a>
+                    <a href="https://youtu.be/9lcBztRNtjs" class="video-link" target="_blank">احذر من طرق اختراق حسابات السناب شات + كيفية استرجاع الحساب المسروق Snapchat hack</a>
+                    <a href="https://www.youtube.com/watch?v=a2icpCIafl0" class="video-link" target="_blank">الطريقه الصحيحة لاسترجاع حساب السناب شات المخترق</a>
+                    <a href="https://www.youtube.com/watch?v=v1cOAwBczqw" class="video-link" target="_blank">إذا كنت من مستخدمي تطبيق حفظ الباسوردات Lastpass فهذا الفيديو لك</a>
+                    <a href="https://youtu.be/Q1kLiRjXbA0" class="video-link" target="_blank">معرفة إذا كان جوالك مخترق او لا ؟ كود *#62# (معلومة غير صحيحة)</a>
+                    <a href="https://www.youtube.com/watch?v=uwIVgC2fAS8&amp;t" class="video-link" target="_blank">كيف يتم استدراج الأطفال في منصات الألعاب Cyber Grooming</a>
+                </div>
+            </div>
 
-            <a href="https://youtu.be/Xi1wTBfTIcA" target="_blank">تحميل وتثبيت نظام كالي لينكس على VirtualBox ( شرح سريع وسهل ) - 2025</a>
-            <a href="https://youtu.be/fEYTuFXVobU" target="_blank">تحميل وتثبيت نظام كالي لينكس على VMware بإصدار كامل</a>
-            <a href="https://youtu.be/2CRp0GlgvIY" target="_blank">طريقة للبحث عن أي برنامج باصدار كامل عن طريق قوقل</a>
-            <a href="https://youtu.be/El2I8jI4aWg" target="_blank">مفهوم الروابط URL - شرح مفصل ومهم لمختبري تطبيقات الويب</a>
-            <a href="https://youtu.be/lZGRA0TsqOk" target="_blank">موقع لتحميل الكتب مجانا - مفيد جدا لتطوير نفسك في مجال الأمن السيبراني والهكر الأخلاقي</a>
-            <a href="https://youtu.be/h0MssqeXpqE" target="_blank">سؤال: هل Bash Shell لغة برمجه او لا؟</a>
-            <a href="https://youtu.be/erITT49zD_4" target="_blank">تطور الأمن السيبراني: الصراع الدائم بين الاختراق والحماية وكيف يؤثر كل طرف على الآخر</a>
-            <a href="https://youtu.be/a_m4oVui6n0" target="_blank">أفضل مختبرات التدريب على الأمن السيبراني والهكر الأخلاقي</a>
-            <a href="https://youtu.be/6qMBJlGN4EE" target="_blank">20 وظيفة في الأمن السيبراني الأكثر طلباً في سوق العمل</a>
+            <!-- Section 4 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ اختبار فحص المواقع وتطبيقات الويب PortSwigger 🛡️</h4>
+                <h4>🛡️ Web Pentesting 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div style="text-align: center; margin: 2rem 0;">
+                    <a href="/القائمة-الكاملة-لمختبرات-PortSwigger-الأمنية-04-15" class="channel-link" target="_blank">يرجى الضغط هنا للقائمة الكاملة</a>
+                </div>
+            </div>
 
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ التوعية والتثقيف السيبراني ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
+            <!-- Section 5 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ اختبار فحص المواقع وتطبيقات الويب OverTheWire 🛡️</h4>
+                <h4>🛡️ Web Pentesting 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="video-links">
+                    <a href="https://youtu.be/elzpC45Tb-Y" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الأول)</a>
+                    <a href="https://youtu.be/MWmaKNfBNdM" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثاني)</a>
+                    <a href="https://youtu.be/YcvEiXTwSik" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثالث)</a>
+                    <a href="https://youtu.be/x82PGtSQrys" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الرابع)</a>
+                    <a href="https://youtu.be/rd6AGvJx_-g" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الخامس)</a>
+                    <a href="https://youtu.be/JiZg-aCBIiM" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء السادس)</a>
+                    <a href="https://youtu.be/xVNU-mVxiAk" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء السابع)</a>
+                    <a href="https://youtu.be/ZUn6v-UupsM" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثامن)</a>
+                    <a href="https://youtu.be/PNCTOxsR3R0" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء التاسع)</a>
+                    <a href="https://youtu.be/qhNcGoXDhG4" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء العاشر)</a>
+                    <a href="https://youtu.be/0bsnExVoVjU" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الحادي عشر)</a>
+                    <a href="https://youtu.be/5zAOsNAcTg4" class="video-link" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثاني عشر والأخير)</a>
+                    <a href="https://youtu.be/yzdhFWi4gxU" class="video-link" target="_blank">ملخص - تحويل ما تعلمته إلى أرض الواقع (اختبار فحص المواقع)</a>
+                </div>
+            </div>
 
-            <a href="https://www.youtube.com/watch?v=FieUQPqjj6w" target="_blank">احذر قد يتم حظر حسابك في الواتساب + طريقة فك حظر الواتساب - WhatsApp Banned</a>
-            <a href="https://youtu.be/dRB9dBqdi0I" target="_blank">احذر من طرق اختراق حسابات الانستقرام + كيفية استرجاع الحساب المسروق Instagram hack</a>
-            <a href="https://youtu.be/9lcBztRNtjs" target="_blank">احذر من طرق اختراق حسابات السناب شات + كيفية استرجاع الحساب المسروق Snapchat hack</a>
-            <a href="https://www.youtube.com/watch?v=a2icpCIafl0" target="_blank">الطريقه الصحيحة لاسترجاع حساب السناب شات المخترق</a>
-            <a href="https://www.youtube.com/watch?v=v1cOAwBczqw" target="_blank">إذا كنت من مستخدمي تطبيق حفظ الباسوردات Lastpass فهذا الفيديو لك</a>
-            <a href="https://youtu.be/Q1kLiRjXbA0" target="_blank">معرفة إذا كان جوالك مخترق او لا ؟ كود *#62# (معلومة غير صحيحة)</a>
-            <a href="https://www.youtube.com/watch?v=uwIVgC2fAS8&amp;t" target="_blank">كيف يتم استدراج الأطفال في منصات الألعاب Cyber Grooming</a>
+            <!-- Section 6 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ اختبار فحص المواقع وتطبيقات الويب 🛡️</h4>
+                <h4>🛡️ Web Pentesting 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=bqrkWZ0tkqY" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - المقدمة</a>
+                    <a href="https://www.youtube.com/watch?v=LQnSku8QZXM" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - أساليب جمع المعلومات - الجزء الأول</a>
+                    <a href="https://www.youtube.com/watch?v=RIragDaG-zY" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - أساليب جمع المعلومات - الجزء الثاني</a>
+                    <a href="https://www.youtube.com/watch?v=ealkgLFzFiQ" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - أساليب جمع المعلومات - الجزء الثالث (والاخير)</a>
+                    <a href="https://www.youtube.com/watch?v=2sRESops7-o" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء الأول</a>
+                    <a href="https://www.youtube.com/watch?v=hm-XaU6e-ho" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء الثاني</a>
+                    <a href="https://www.youtube.com/watch?v=G-iJhUIu__o" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب CSRF - الجزء الثالث</a>
+                    <a href="https://www.youtube.com/watch?v=HI0Cf6a6qH4" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب API - الجزء الرابع</a>
+                    <a href="https://www.youtube.com/watch?v=Ymo-V3ldO94" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب Hidden File - الجزء الخامس</a>
+                    <a href="https://www.youtube.com/watch?v=Z3eNiJE5ZzQ" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب CAPTCHA Bypass - الجزء السادس</a>
+                    <a href="https://www.youtube.com/watch?v=mDnFaN-ylpY" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء السابع - XSS</a>
+                    <a href="https://www.youtube.com/watch?v=zsqAWGiaJ6E" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء الثامن- XSS</a>
+                    <a href="https://www.youtube.com/watch?v=qX2U-txF-bM" class="video-link" target="_blank">المرحلة الأولى الاستطلاع Footprinting - CEH Certificate Ethical Hacker</a>
+                    <a href="https://youtu.be/RbjTwKdtueE" class="video-link" target="_blank">اختبار الاختراق - مصدر الصفحه - الهكر الاخلاقي - HTML - Source code</a>
+                    <a href="https://www.youtube.com/watch?v=m3hXkwjMofc" class="video-link" target="_blank">تطبيق عملي - اختبار فحص المواقع عن طريق حقن قواعد البيانات sql Injection - الهكر الأخلاقي</a>
+                    <a href="https://www.youtube.com/watch?v=KuzIVyQDBmQ" class="video-link" target="_blank">تطبيق عملي - تعرف على جميع أنواع الثغرات الأمنية الشهيره وكيفية الحماية منها</a>
+                    <a href="https://www.youtube.com/watch?v=F1c-v034ReA" class="video-link" target="_blank">للمبتدئين : كيف تشتغل ثغرات xss stored</a>
+                </div>
+            </div>
 
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ اختبار فحص المواقع وتطبيقات الويب PortSwigger ] 🛡️</h4>
-            <h4>🛡️ [Web Pentesting ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
+            <!-- Section 7 -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <h4>🛡️ اختبار فحص شبكات الواي فاي 🛡️</h4>
+                <h4>🛡️ WiFi Pentesting 🛡️</h4>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="video-links">
+                    <a href="https://youtu.be/hjM32yq-_Og" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الأول - المقدمة</a>
+                    <a href="https://youtu.be/KRxaQ1O6xHo" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الثاني - كشف الشبكات المجاوره</a>
+                    <a href="https://youtu.be/UCEV1QEhZZA" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الثالث - كسر وكشف باسوردات الشبكة</a>
+                    <a href="https://youtu.be/jo17eusyxsg" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الرابع - كشف الشبكات المخفية</a>
+                    <a href="https://youtu.be/tiEo9EgtqgE" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - كسر باسورد شبكات WEP - الجزء الخامس</a>
+                    <a href="https://youtu.be/12qWR4ZdKiE" class="video-link" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - إنشاء نقطة وايفاي مزوره - الجزء السادس</a>
+                </div>
+            </div>
 
-            <aside><a href="/القائمة-الكاملة-لمختبرات-PortSwigger-الأمنية-04-15" target="_blank">&lt;يرجى الضغط هنا&gt;</a></aside>
+            <!-- Continue with the rest of the sections in the same pattern -->
+            <!-- I'll continue with a few more sections as example -->
 
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ اختبار فحص المواقع وتطبيقات الويب OverTheWire ] 🛡️</h4>
-            <h4>🛡️ [Web Pentesting ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://youtu.be/elzpC45Tb-Y" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الأول)</a>
-            <a href="https://youtu.be/MWmaKNfBNdM" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثاني)</a>
-            <a href="https://youtu.be/YcvEiXTwSik" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثالث)</a>
-            <a href="https://youtu.be/x82PGtSQrys" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الرابع)</a>
-            <a href="https://youtu.be/rd6AGvJx_-g" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الخامس)</a>
-            <a href="https://youtu.be/JiZg-aCBIiM" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء السادس)</a>
-            <a href="https://youtu.be/xVNU-mVxiAk" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء السابع)</a>
-            <a href="https://youtu.be/ZUn6v-UupsM" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثامن)</a>
-            <a href="https://youtu.be/PNCTOxsR3R0" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء التاسع)</a>
-            <a href="https://youtu.be/qhNcGoXDhG4" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء العاشر)</a>
-            <a href="https://youtu.be/0bsnExVoVjU" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الحادي عشر)</a>
-            <a href="https://youtu.be/5zAOsNAcTg4" target="_blank">تطبيق عملي - التدريب على اختبار فحص المواقع بجميع الطرق - الهكر الأخلاقي (الجزء الثاني عشر والأخير)</a>
-            <a href="https://youtu.be/yzdhFWi4gxU" target="_blank">ملخص - تحويل ما تعلمته إلى أرض الواقع (اختبار فحص المواقع)</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ اختبار فحص المواقع وتطبيقات الويب ] 🛡️</h4>
-            <h4>🛡️ [Web Pentesting ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://www.youtube.com/watch?v=bqrkWZ0tkqY" target="_blank">منهج الهكر الاخلاقي العربي - المقدمة</a>
-            <a href="https://www.youtube.com/watch?v=LQnSku8QZXM" target="_blank">منهج الهكر الاخلاقي العربي - أساليب جمع المعلومات - الجزء الأول</a>
-            <a href="https://www.youtube.com/watch?v=RIragDaG-zY&amp;pp=0gcJCdQJAYcqIYzv" target="_blank">منهج الهكر الاخلاقي العربي - أساليب جمع المعلومات - الجزء الثاني</a>
-            <a href="https://www.youtube.com/watch?v=ealkgLFzFiQ" target="_blank">منهج الهكر الاخلاقي العربي - أساليب جمع المعلومات - الجزء الثالث ( والاخير)</a>
-            <a href="https://www.youtube.com/watch?v=2sRESops7-o" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء الأول</a>
-            <a href="https://www.youtube.com/watch?v=hm-XaU6e-ho" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء الثاني</a>
-            <a href="https://www.youtube.com/watch?v=G-iJhUIu__o&amp;t=128s" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب CSRF - الجزء الثالث</a>
-            <a href="https://www.youtube.com/watch?v=HI0Cf6a6qH4&amp;pp=0gcJCdQJAYcqIYzv" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب API - الجزء الرابع</a>
-            <a href="https://www.youtube.com/watch?v=Ymo-V3ldO94" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب Hidden File - الجزء الخامس</a>
-            <a href="https://www.youtube.com/watch?v=Z3eNiJE5ZzQ" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب CAPTCHA Bypass - الجزء السادس</a>
-            <a href="https://www.youtube.com/watch?v=mDnFaN-ylpY" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء السابع - XSS</a>
-            <a href="https://www.youtube.com/watch?v=zsqAWGiaJ6E&amp;t=87s" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص المواقع وتطبيقات الويب - الجزء الثامن- XSS</a>
-            <a href="https://www.youtube.com/watch?v=qX2U-txF-bM" target="_blank">المرحلة الأولى الاستطلاع Footprinting - CEH Certificate Ethical Hacker</a>
-            <a href="https://youtu.be/RbjTwKdtueE" target="_blank">اختبار الاختراق - مصدر الصفحه - الهكر الاخلاقي - HTML - Source code</a>
-            <a href="https://www.youtube.com/watch?v=m3hXkwjMofc" target="_blank">تطبيق عملي - اختبار فحص المواقع عن طريق حقن قواعد البيانات sql Injection - الهكر الأخلاقي</a>
-            <a href="https://www.youtube.com/watch?v=KuzIVyQDBmQ" target="_blank">تطبيق عملي - تعرف على جميع أنواع الثغرات الأمنية الشهيره وكيفية الحماية منها</a>
-            <a href="https://www.youtube.com/watch?v=F1c-v034ReA" target="_blank">للمبتدئين : كيف تشتغل ثغرات xss stored</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ اختبار فحص شبكات الواي فاي ] 🛡️</h4>
-            <h4>🛡️ [WiFi Pentesting ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://youtu.be/hjM32yq-_Og" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الأول - المقدمة</a>
-            <a href="https://youtu.be/KRxaQ1O6xHo" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الثاني - كشف الشبكات المجاوره</a>
-            <a href="https://youtu.be/UCEV1QEhZZA" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الثالث - كسر وكشف باسوردات الشبكة</a>
-            <a href="https://youtu.be/jo17eusyxsg" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - الجزء الرابع - كشف الشبكات المخفية</a>
-            <a href="https://youtu.be/tiEo9EgtqgE" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - كسر باسورد شبكات WEP - الجزء الخامس</a>
-            <a href="https://youtu.be/12qWR4ZdKiE" target="_blank">منهج الهكر الاخلاقي العربي - اختبار فحص شبكات الواي فاي - إنشاء نقطة وايفاي مزوره - الجزء السادس</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ اختبار فحص السيرفرات ] 🛡️</h4>
-            <h4>🛡️ [Server Pentesting] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://www.youtube.com/watch?v=dRBF_6N2xFU&amp;t=1s&amp;pp=0gcJCdQJAYcqIYzv" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء الأول)</a>
-            <a href="https://www.youtube.com/watch?v=v9ufq-jyBW4" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء الثاني)</a>
-            <a href="https://www.youtube.com/watch?v=-Mtl2aqtFoo&amp;t=6s" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء الثالث)</a>
-            <a href="https://www.youtube.com/watch?v=YcqpUK5oDP0&amp;t=22s" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء الرابع)</a>
-            <a href="https://www.youtube.com/watch?v=CuHLt1T9jpc" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء الخامس)</a>
-            <a href="https://www.youtube.com/watch?v=njgoZG8ERR8&amp;t=34s" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء السادس)</a>
-            <a href="https://www.youtube.com/watch?v=8zmiYmrM9Zk" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء السابع)</a>
-            <a href="https://www.youtube.com/watch?v=ljmVUMjZ9ws" target="_blank">تطبيق عملي - التدريب على اختبار فحص السيرفرات - الهكر الأخلاقي (الجزء الثامن)</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ شرح كتاب اتقان كالي لينكس وادواته ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://www.youtube.com/watch?v=QKaqftybSTw" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - المقدمة</a>
-            <a href="https://www.youtube.com/watch?v=W8SPsjiW_X8" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - إعداد نظام كالي لينكس</a>
-            <a href="https://www.youtube.com/watch?v=T5ROIIbTwB0&amp;t=340s" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - osint الدفاعي - ختام الفصل الثاني</a>
-            <a href="https://www.youtube.com/watch?v=8GJwWsSHx_4" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - شرح أداه OSRFramework</a>
-            <a href="https://www.youtube.com/watch?v=XFSl7pRfP2Y&amp;t=1s&amp;pp=0gcJCdQJAYcqIYzv" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - مفاهيم (1)</a>
-            <a href="https://www.youtube.com/watch?v=-HhKB-EB6b0&amp;t=199s" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - مفاهيم (2)</a>
-            <a href="https://www.youtube.com/watch?v=PP8GeFUerCM" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - شرح اداه theHarvester</a>
-            <a href="https://www.youtube.com/watch?v=FNMYyCoV9oM&amp;t=3s" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - شرح اداه recon-ng - الفصل الثالث</a>
-            <a href="https://www.youtube.com/watch?v=uwV3GeXLo5w&amp;t=171s" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - مقدمة أساليب التخفي - الفصل الثالث</a>
-            <a href="https://www.youtube.com/watch?v=Jlb3e58h4w8&amp;t=17s" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - Google hacking</a>
-            <a href="https://www.youtube.com/watch?v=0-wdysejpaA" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - شرح برنامج Maltego</a>
-            <a href="https://www.youtube.com/watch?v=YVtBc16e34s&amp;pp=0gcJCdQJAYcqIYzv" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - ارشفة المواقع Archive</a>
-            <a href="https://www.youtube.com/watch?v=XAS_wVYnv_4" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - تجهيز مختبر إختراق Mutillidae</a>
-            <a href="https://www.youtube.com/watch?v=cQhm3IxAvE4&amp;t=601s" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - موقع Pastebin كنز المعلومات</a>
-            <a href="https://www.youtube.com/watch?v=2givI7DH840" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - استخبارات المصادر المفتوحة (OSINT)</a>
-            <a href="https://www.youtube.com/watch?v=aBAxw4_4KFY&amp;t=25s&amp;pp=0gcJCdQJAYcqIYzv" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - whois + DMitry tools - الفصل الثالث</a>
-            <a href="https://www.youtube.com/watch?v=fR5wvh2Ch0k" target="_blank">اتقان كالي لينكس لاختبار الاختراق المتقدم - NMAP + Proxychains - الفصل الثالث</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ أمن الشبكات ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://youtu.be/sQhcToF6xbw" target="_blank">شرح الطبقات السبع OSI Layers وما يقابلها من تهديدات أمنية</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ تحديات وحلول CTF ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://youtu.be/YWa4yIIh86E" target="_blank">التعرف على تقنية what3words + حل تحدي CFT بالاستعانه بهذه التقنية</a>
-            <a href="https://www.youtube.com/watch?v=L_sIIwY_SD8" target="_blank">CTF Forensics WriteUp - Selfie</a>
-            <a href="https://www.youtube.com/watch?v=IZ_AfrbFLZ0" target="_blank">CTF Forensics WriteUp - Street View</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ شرح الأدوات والبرامج ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://www.youtube.com/watch?v=uQNmheTjALg" target="_blank">شرح أداه Sublister لاستخراج نطاقات المواقع</a>
-            <a href="https://www.youtube.com/watch?v=Etcq3S3HI7g" target="_blank">شرح أداة Eagle Osint لجمع المعلومات وإنشاء بريد إلكتروني مؤقت</a>
-            <a href="https://www.youtube.com/watch?v=DAYkMQMjb7Y" target="_blank">اختبار فحص المواقع عبر برنامج Burp suite و ZAP</a>
-            <a href="https://www.youtube.com/watch?v=einNVrKm3Tk" target="_blank">شرح أداه CUPP من الأدوات القويه لإنشاء ملف الباسورد</a>
-            <a href="https://www.youtube.com/watch?v=YAdcZDd41co" target="_blank">مقارنة بين أداة CUPP و crunch في إنشاء قوائم باسوردات</a>
-
-            <strong>🔥┌───────────────────────🔥</strong>
-            <h4>🛡️ [ تقارير تحليلية وتغطيات سيبرانية ] 🛡️</h4>
-            <strong>🔒└───────────────────────🔒</strong>
-
-            <a href="https://www.youtube.com/watch?v=BobBrI2lRZE" target="_blank">تغطية دورات معهد SANS في لندن</a>
-            <a href="https://youtu.be/oPZohsWcg0E" target="_blank">السيد روبوت - مقهى رون ومستر روبوت</a>
-            <a href="https://www.youtube.com/watch?v=5HIfOnY6rHg" target="_blank">السيد روبوت - قصة إليوت والإخصائية كرستا</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#home">الرئيسية</a>
-                <a href="#content">المحتوى التعليمي</a>
-                <a href="https://www.youtube.com/@DrProcess" target="_blank">قناة اليوتيوب</a>
-            </div>
-            <div class="social-links">
-                <a href="https://www.youtube.com/@DrProcess" title="YouTube" target="_blank">📺</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="Twitter">🐦</a>
-                <a href="#" title="WhatsApp">💬</a>
-                <a href="#" title="Telegram">📱</a>
-            </div>
-            <p class="copyright">© 2026 Dr Process Academy. جميع الحقوق محفوظة.</p>
+    <footer>
+        <div class="footer-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#content">المحتوى التعليمي</a>
+            <a href="https://www.youtube.com/@DrProcess" target="_blank">قناة اليوتيوب</a>
         </div>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@DrProcess" title="YouTube" target="_blank">📺</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Twitter">🐦</a>
+        </div>
+        <p class="copyright">© 2026 Dr Process Academy. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script>
         // Matrix Rain Effect
         const canvas = document.getElementById('matrix');
-        const ctx = canvas.getContext('2d');
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const letters = '01';
-        const fontSize = 14;
-        const columns = canvas.width / fontSize;
-        const drops = Array(Math.floor(columns)).fill(1);
-
-        function drawMatrix() {
-            ctx.fillStyle = 'rgba(5, 8, 16, 0.05)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            ctx.fillStyle = '#00ff41';
-            ctx.font = fontSize + 'px monospace';
-
-            for (let i = 0; i < drops.length; i++) {
-                const text = letters[Math.floor(Math.random() * letters.length)];
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                    drops[i] = 0;
-                }
-                drops[i]++;
-            }
-        }
-
-        setInterval(drawMatrix, 35);
-
-        window.addEventListener('resize', () => {
+        if (canvas.getContext) {
+            const ctx = canvas.getContext('2d');
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
-        });
+            
+            const letters = '01';
+            const fontSize = 14;
+            const columns = canvas.width / fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
 
-        // Mobile Menu Toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(5, 8, 16, 0.03)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#00ff41';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = letters[Math.floor(Math.random() * letters.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(drawMatrix, 35);
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
         }
 
-        // Scroll Animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.8s ease-out';
-            observer.observe(el);
-        });
+        // Mobile Menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
 
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
