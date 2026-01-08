@@ -209,6 +209,15 @@
             display: none !important;
         }
 
+        .content-block {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 255, 65, 0.03);
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
         /* Hero Section */
         .hero {
             min-height: 50vh;
@@ -272,6 +281,7 @@
             background: rgba(0, 255, 65, 0.03);
             border-radius: 10px;
             border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
         }
 
         .content-block h3 {
@@ -450,6 +460,19 @@
             .content-container {
                 padding: 1rem;
             }
+
+            .search-container {
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .search-input:focus {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -499,6 +522,13 @@
             <div class="section-header">
                 <h2>دليل قناة Dr Process للأمن السيبراني والهكر الأخلاقي</h2>
                 <p class="update-info">تاريخ آخر تحديث: 10 مايو 2025</p>
+            </div>
+
+            <div id="searchStats" class="search-stats hidden"></div>
+
+            <div id="noResults" class="no-results hidden">
+                <p>🔍 لم يتم العثور على نتائج مطابقة لبحثك</p>
+                <p style="font-size: 0.9rem; margin-top: 1rem;">جرّب كلمات بحث مختلفة</p>
             </div>
 
             <div class="content-block">
@@ -801,6 +831,119 @@
         // Mobile Menu
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Search Functionality
+        const searchInput = document.getElementById('searchInput');
+        const clearBtn = document.getElementById('clearBtn');
+        const contentBlocks = document.querySelectorAll('.content-block');
+        const searchStats = document.getElementById('searchStats');
+        const noResults = document.getElementById('noResults');
+        const welcomeBlock = document.querySelector('.content-block:first-child');
+
+        let originalContent = [];
+        contentBlocks.forEach(block => {
+            originalContent.push(block.innerHTML);
+        });
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.trim();
+            
+            if (searchTerm.length > 0) {
+                clearBtn.style.display = 'flex';
+                performSearch(searchTerm);
+            } else {
+                clearBtn.style.display = 'none';
+                resetSearch();
+            }
+        });
+
+        function performSearch(searchTerm) {
+            let visibleBlocks = 0;
+            let totalMatches = 0;
+            const searchRegex = new RegExp(searchTerm, 'gi');
+
+            contentBlocks.forEach((block, index) => {
+                // Don't hide welcome block
+                if (block === welcomeBlock) {
+                    block.classList.add('hidden');
+                    return;
+                }
+
+                // Restore original content
+                block.innerHTML = originalContent[index];
+                
+                const text = block.textContent || block.innerText;
+                const matches = text.match(searchRegex);
+                
+                if (matches) {
+                    visibleBlocks++;
+                    totalMatches += matches.length;
+                    
+                    // Highlight matches in video links
+                    const videoLinks = block.querySelectorAll('.video-link');
+                    videoLinks.forEach(link => {
+                        const linkText = link.textContent;
+                        if (searchRegex.test(linkText)) {
+                            link.innerHTML = linkText.replace(searchRegex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    });
+
+                    // Highlight in headers
+                    const headers = block.querySelectorAll('h3, h4');
+                    headers.forEach(header => {
+                        const headerText = header.textContent;
+                        if (searchRegex.test(headerText)) {
+                            header.innerHTML = headerText.replace(searchRegex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    });
+
+                    // Highlight in paragraphs
+                    const paragraphs = block.querySelectorAll('p');
+                    paragraphs.forEach(p => {
+                        const pText = p.textContent;
+                        if (searchRegex.test(pText)) {
+                            p.innerHTML = pText.replace(searchRegex, match => 
+                                `<span class="highlight">${match}</span>`
+                            );
+                        }
+                    });
+                    
+                    block.style.display = '';
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+
+            // Show/hide stats and no results message
+            if (visibleBlocks > 0) {
+                searchStats.textContent = `🔎 تم العثور على ${totalMatches} نتيجة في ${visibleBlocks} قسم`;
+                searchStats.classList.remove('hidden');
+                noResults.classList.add('hidden');
+            } else {
+                searchStats.classList.add('hidden');
+                noResults.classList.remove('hidden');
+            }
+        }
+
+        function resetSearch() {
+            contentBlocks.forEach((block, index) => {
+                block.innerHTML = originalContent[index];
+                block.style.display = '';
+            });
+            searchStats.classList.add('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        function clearSearch() {
+            searchInput.value = '';
+            clearBtn.style.display = 'none';
+            resetSearch();
+            searchInput.focus();
         }
 
         // Smooth Scroll
