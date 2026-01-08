@@ -130,6 +130,85 @@
             border-radius: 2px;
         }
 
+        /* Search Container */
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-input {
+            padding: 0.6rem 2.5rem 0.6rem 1rem;
+            border: 2px solid var(--border-color);
+            background: rgba(20, 27, 45, 0.8);
+            color: var(--text-primary);
+            border-radius: 25px;
+            font-size: 0.9rem;
+            width: 250px;
+            transition: all 0.3s;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary-green);
+            box-shadow: 0 0 15px var(--glow-green);
+            width: 300px;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .clear-btn {
+            position: absolute;
+            left: 10px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.2rem 0.5rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clear-btn:hover {
+            color: var(--primary-green);
+            transform: scale(1.2);
+        }
+
+        .highlight {
+            background: var(--primary-green);
+            color: var(--darker-bg);
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+        }
+
+        .search-stats {
+            text-align: center;
+            padding: 1rem;
+            color: var(--accent-blue);
+            font-size: 0.95rem;
+            background: rgba(0, 217, 255, 0.05);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
         /* Hero Section */
         .hero {
             min-height: 50vh;
@@ -393,10 +472,14 @@
                 <span></span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="https://dr-process.github.io/index.html">الرئيسية</a></li>
-                <li><a href="https://dr-process.github.io/guide.html">المحتوى التعليمي</a></li>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#content">المحتوى التعليمي</a></li>
                 <li><a href="#about">عن القناة</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ابحث في المحتوى..." class="search-input">
+                <button onclick="clearSearch()" class="clear-btn" id="clearBtn" style="display: none;">✕</button>
+            </div>
             <a href="https://www.youtube.com/@DrProcess" class="cta-button" target="_blank">اشترك في القناة</a>
         </nav>
     </header>
