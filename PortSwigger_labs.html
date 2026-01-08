@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎯 القائمة الكاملة لمختبرات PortSwigger الأمنية</title>
+    <title>🎯 القائمة الكاملة لمختبرات PortSwigger الأمنية - Dr Process Academy</title>
     <style>
         * {
             margin: 0;
@@ -21,6 +21,9 @@
             --text-secondary: #a0a0a0;
             --border-color: rgba(0, 255, 65, 0.2);
             --glow-green: rgba(0, 255, 65, 0.3);
+            --apprentice: #00ff41;
+            --practitioner: #00d9ff;
+            --expert: #ff0066;
         }
 
         body {
@@ -130,85 +133,6 @@
             border-radius: 2px;
         }
 
-        /* Search Container */
-        .search-container {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .search-input {
-            padding: 0.6rem 2.5rem 0.6rem 1rem;
-            border: 2px solid var(--border-color);
-            background: rgba(20, 27, 45, 0.8);
-            color: var(--text-primary);
-            border-radius: 25px;
-            font-size: 0.9rem;
-            width: 250px;
-            transition: all 0.3s;
-            outline: none;
-        }
-
-        .search-input:focus {
-            border-color: var(--primary-green);
-            box-shadow: 0 0 15px var(--glow-green);
-            width: 300px;
-        }
-
-        .search-input::placeholder {
-            color: var(--text-secondary);
-        }
-
-        .clear-btn {
-            position: absolute;
-            left: 10px;
-            background: transparent;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 0.2rem 0.5rem;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .clear-btn:hover {
-            color: var(--primary-green);
-            transform: scale(1.2);
-        }
-
-        .highlight {
-            background: var(--primary-green);
-            color: var(--darker-bg);
-            padding: 0.1rem 0.3rem;
-            border-radius: 3px;
-            font-weight: bold;
-        }
-
-        .no-results {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-        }
-
-        .search-stats {
-            text-align: center;
-            padding: 1rem;
-            color: var(--accent-blue);
-            font-size: 0.95rem;
-            background: rgba(0, 217, 255, 0.05);
-            border-radius: 10px;
-            margin-bottom: 1rem;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
         /* Hero Section */
         .hero {
             min-height: 40vh;
@@ -225,7 +149,7 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 1.5rem;
             background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
             -webkit-background-clip: text;
@@ -234,7 +158,7 @@
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
             margin-bottom: 1rem;
             line-height: 1.6;
@@ -266,64 +190,12 @@
             margin-bottom: 1rem;
         }
 
-        .info-box {
-            background: rgba(0, 217, 255, 0.05);
-            border: 1px solid var(--accent-blue);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .info-box h3 {
-            color: var(--accent-blue);
-            margin-bottom: 1rem;
-        }
-
-        .info-box p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            margin-bottom: 0.5rem;
-        }
-
-        .level-badges {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 1rem 0;
-        }
-
-        .badge {
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
-        }
-
-        .badge-apprentice {
-            background: rgba(0, 255, 100, 0.1);
-            color: #00ff64;
-            border: 1px solid #00ff64;
-        }
-
-        .badge-practitioner {
-            background: rgba(0, 150, 255, 0.1);
-            color: #0096ff;
-            border: 1px solid #0096ff;
-        }
-
-        .badge-expert {
-            background: rgba(255, 50, 50, 0.1);
-            color: #ff3232;
-            border: 1px solid #ff3232;
-        }
-
         .content-block {
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             padding: 1.5rem;
             background: rgba(0, 255, 65, 0.03);
             border-radius: 10px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
         }
 
         .content-block h3 {
@@ -341,13 +213,13 @@
             border-right: 3px solid var(--primary-green);
         }
 
-        .lab-links {
+        .video-links {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
         }
 
-        .lab-link {
+        .video-link {
             color: var(--text-primary);
             text-decoration: none;
             padding: 0.8rem 1rem;
@@ -360,7 +232,7 @@
             gap: 10px;
         }
 
-        .lab-link:hover {
+        .video-link:hover {
             color: var(--primary-green);
             background: rgba(0, 255, 65, 0.1);
             border-color: var(--primary-green);
@@ -368,23 +240,14 @@
             box-shadow: 0 5px 15px var(--glow-green);
         }
 
-        .lab-link::before {
+        .video-link::before {
             content: '▶';
             color: var(--accent-blue);
             font-size: 0.9em;
         }
 
-        .lab-link:hover::before {
+        .video-link:hover::before {
             color: var(--primary-green);
-        }
-
-        .lab-text {
-            color: var(--text-secondary);
-            padding: 0.8rem 1rem;
-            background: rgba(100, 100, 100, 0.05);
-            border: 1px solid rgba(100, 100, 100, 0.2);
-            border-radius: 8px;
-            margin-bottom: 0.8rem;
         }
 
         .divider {
@@ -400,6 +263,137 @@
             font-style: italic;
             margin-bottom: 1.5rem;
             text-align: center;
+        }
+
+        .channel-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+            color: var(--darker-bg);
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 1rem auto;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px var(--glow-green);
+        }
+
+        .channel-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--glow-green);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-green);
+            margin: 1rem 0;
+            font-size: 1.3rem;
+        }
+
+        /* Level Badges */
+        .level-badge {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        .apprentice {
+            background: rgba(0, 255, 65, 0.2);
+            color: var(--apprentice);
+            border: 1px solid var(--apprentice);
+        }
+
+        .practitioner {
+            background: rgba(0, 217, 255, 0.2);
+            color: var(--practitioner);
+            border: 1px solid var(--practitioner);
+        }
+
+        .expert {
+            background: rgba(255, 0, 102, 0.2);
+            color: var(--expert);
+            border: 1px solid var(--expert);
+        }
+
+        /* Category Colors */
+        .category-header {
+            background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 217, 255, 0.1));
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Lab Grid */
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .lab-item {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .lab-item:hover {
+            background: rgba(0, 255, 65, 0.1);
+            border-color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+
+        .lab-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: block;
+        }
+
+        .lab-item a:hover {
+            color: var(--primary-green);
+        }
+
+        .lab-number {
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-left: 0.5rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .info-box h4 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-right: 1rem;
+        }
+
+        .info-box li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .info-box li:before {
+            content: "•";
+            color: var(--primary-green);
+            margin-left: 0.5rem;
         }
 
         /* Footer */
@@ -427,6 +421,34 @@
 
         .footer-links a:hover {
             color: var(--primary-green);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-green);
+            color: var(--darker-bg);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--glow-green);
         }
 
         .copyright {
@@ -465,18 +487,9 @@
             .content-container {
                 padding: 1rem;
             }
-
-            .search-container {
-                width: 100%;
-                margin: 1rem 0;
-            }
-
-            .search-input {
-                width: 100%;
-            }
-
-            .search-input:focus {
-                width: 100%;
+            
+            .lab-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -502,12 +515,10 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">الرئيسية</a></li>
                 <li><a href="#content">المختبرات</a></li>
+                <li><a href="#about">عن المختبرات</a></li>
+                <li><a href="#levels">المستويات</a></li>
             </ul>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="ابحث في المختبرات..." class="search-input">
-                <button onclick="clearSearch()" class="clear-btn" id="clearBtn" style="display: none;">✕</button>
-            </div>
-            <a href="https://www.youtube.com/@DrProcess" class="cta-button" target="_blank">القناة</a>
+            <a href="https://portswigger.net/web-security" class="cta-button" target="_blank">موقع PortSwigger</a>
         </nav>
     </header>
 
@@ -515,7 +526,8 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>🎯 القائمة الكاملة لمختبرات PortSwigger الأمنية</h1>
-            <p>دليلك الشامل لجميع مختبرات PortSwigger لاختبار الاختراق</p>
+            <p>جميع مختبرات الأمن السيبراني من PortSwigger (مطور Burp Suite) مع شرح كامل</p>
+            <p>تصنيف شامل لجميع الثغرات الأمنية الحديثة</p>
         </div>
     </section>
 
@@ -523,152 +535,258 @@
     <section class="content-section" id="content">
         <div class="content-container">
             <div class="section-header">
-                <h2>القائمة الكاملة لمختبرات PortSwigger الأمنية</h2>
+                <h2>🎯 القائمة الكاملة لمختبرات PortSwigger الأمنية</h2>
                 <p class="update-info">تاريخ آخر تحديث: 10 مايو 2025</p>
             </div>
 
-            <div id="searchStats" class="search-stats hidden"></div>
-
-            <div id="noResults" class="no-results hidden">
-                <p>🔍 لم يتم العثور على نتائج مطابقة لبحثك</p>
-                <p style="font-size: 0.9rem; margin-top: 1rem;">جرّب كلمات بحث مختلفة</p>
-            </div>
-
-            <div class="info-box">
-                <h3>مرحبًا بك في القائمة الشاملة</h3>
+            <div class="content-block">
+                <h3>مرحبًا بك في القائمة الشاملة لمختبرات PortSwigger الأمنية</h3>
                 <p>هذه المختبرات مقدمة من موقع PortSwigger الرسمي (مطور أداة Burp Suite) وتغطي جميع أنواع الثغرات الأمنية الحديثة.</p>
                 
-                <div class="level-badges">
-                    <span class="badge badge-apprentice">🟢 APPRENTICE (مبتدئ)</span>
-                    <span class="badge badge-practitioner">🔵 PRACTITIONER (متوسط)</span>
-                    <span class="badge badge-expert">🔴 EXPERT (متقدم)</span>
+                <div class="info-box">
+                    <h4>🔍 تصنيف المختبرات:</h4>
+                    <ul>
+                        <li><span class="level-badge apprentice">🟢 APPRENTICE</span> مستوى مبتدئ</li>
+                        <li><span class="level-badge practitioner">🔵 PRACTITIONER</span> مستوى متوسط</li>
+                        <li><span class="level-badge expert">🔴 EXPERT</span> مستوى متقدم</li>
+                    </ul>
                 </div>
 
-                <p>📌 ملاحظة: جميع هذه المختبرات متاحة على موقع <a href="https://portswigger.net/web-security" target="_blank" style="color: var(--accent-blue);">PortSwigger</a> وتتطلب إنشاء حساب مجاني للوصول إليها.</p>
+                <p>📌 <strong>ملاحظة:</strong> جميع هذه المختبرات متاحة على موقع <a href="https://portswigger.net/web-security" class="channel-link" target="_blank">PortSwigger</a> وتتطلب إنشاء حساب مجاني للوصول إليها.</p>
                 <p>تتضمن هذه القائمة روابط لدروس تشرح كيفية حل المختبرات. حاليًا، تم شرح جزء كبير منها، والعمل جارٍ على استكمال شرح جميع المختبرات بإذن الله.</p>
             </div>
 
-            <!-- SQL Injection -->
+            <!-- SQL Injection Section -->
             <div class="content-block">
                 <div class="divider">🔥┌───────────────────────🔥</div>
-                <h4>🛡️ SQL Injection 🛡️</h4>
+                <div class="category-header">
+                    <h4>🛡️ SQL Injection 🛡️</h4>
+                </div>
                 <div class="divider">🔒└───────────────────────🔒</div>
                 
-                <h4>🟢 APPRENTICE (مبتدئ)</h4>
-                <div class="lab-links">
-                    <a href="http://www.youtube.com/watch?v=QKa4PQ3DvvQ" class="lab-link" target="_blank">1. SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</a>
-                    <a href="http://www.youtube.com/watch?v=pLAN8k9SQ3k" class="lab-link" target="_blank">2. SQL injection vulnerability allowing login bypass</a>
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="http://www.youtube.com/watch?v=QKa4PQ3DvvQ" class="video-link" target="_blank">1. SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</a>
+                    <a href="http://www.youtube.com/watch?v=pLAN8k9SQ3k" class="video-link" target="_blank">2. SQL injection vulnerability allowing login bypass</a>
                 </div>
 
-                <h4>🔵 PRACTITIONER (متوسط)</h4>
-                <div class="lab-links">
-                    <a href="https://www.youtube.com/watch?v=cMwQ9Dku3Tc" class="lab-link" target="_blank">3. SQL injection attack, querying the database type and version on Oracle</a>
-                    <a href="https://www.youtube.com/watch?v=_5Ov9nbqS_I" class="lab-link" target="_blank">4. SQL injection attack, querying the database type and version on MySQL and Microsoft</a>
-                    <a href="https://www.youtube.com/watch?v=BpIDYcSg1Dk" class="lab-link" target="_blank">5. SQL injection attack, listing the database contents on non-Oracle databases</a>
-                    <a href="https://www.youtube.com/watch?v=ak-zuANaiDw" class="lab-link" target="_blank">6. SQL injection attack, listing the database contents on Oracle</a>
-                    <a href="http://www.youtube.com/watch?v=XqhLMOZnCMs" class="lab-link" target="_blank">7. SQL injection UNION attack, determining the number of columns returned by the query</a>
-                    <a href="https://www.youtube.com/watch?v=qvq1pKznfuI" class="lab-link" target="_blank">8. SQL injection UNION attack, finding a column containing text</a>
-                    <a href="https://www.youtube.com/watch?v=PShgzes28kE" class="lab-link" target="_blank">9. SQL injection UNION attack, retrieving data from other tables</a>
-                    <a href="https://www.youtube.com/watch?v=_jIBFev9OHM" class="lab-link" target="_blank">10. SQL injection UNION attack, retrieving multiple values in a single column</a>
-                    <a href="https://www.youtube.com/watch?v=VTixMMS7iH4" class="lab-link" target="_blank">11. Blind SQL injection with conditional responses</a>
-                    <a href="https://www.youtube.com/watch?v=rwofAL_tqlc" class="lab-link" target="_blank">12. Blind SQL injection with conditional errors</a>
-                    <a href="https://www.youtube.com/watch?v=T7NvDO6Lfzk" class="lab-link" target="_blank">13. Visible error-based SQL injection</a>
-                    <a href="https://www.youtube.com/watch?v=c19VOSMC5L0" class="lab-link" target="_blank">14. Blind SQL injection with time delays</a>
-                    <a href="https://www.youtube.com/watch?v=mRYDtcu81q8" class="lab-link" target="_blank">15. Blind SQL injection with time delays and information retrieval</a>
-                    <div class="lab-text">16. Blind SQL injection with out-of-band interaction</div>
-                    <div class="lab-text">17. Blind SQL injection with out-of-band data exfiltration</div>
-                    <div class="lab-text">18. SQL injection with filter bypass via XML encoding</div>
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=cMwQ9Dku3Tc" class="video-link" target="_blank">3. SQL injection attack, querying the database type and version on Oracle</a>
+                    <a href="https://www.youtube.com/watch?v=_5Ov9nbqS_I" class="video-link" target="_blank">4. SQL injection attack, querying the database type and version on MySQL and Microsoft</a>
+                    <a href="https://www.youtube.com/watch?v=BpIDYcSg1Dk" class="video-link" target="_blank">5. SQL injection attack, listing the database contents on non-Oracle databases</a>
+                    <a href="https://www.youtube.com/watch?v=ak-zuANaiDw" class="video-link" target="_blank">6. SQL injection attack, listing the database contents on Oracle</a>
+                    <a href="http://www.youtube.com/watch?v=XqhLMOZnCMs" class="video-link" target="_blank">7. SQL injection UNION attack, determining the number of columns returned by the query</a>
+                    <a href="https://www.youtube.com/watch?v=qvq1pKznfuI" class="video-link" target="_blank">8. SQL injection UNION attack, finding a column containing text</a>
+                    <a href="https://www.youtube.com/watch?v=PShgzes28kE" class="video-link" target="_blank">9. SQL injection UNION attack, retrieving data from other tables</a>
+                    <a href="https://www.youtube.com/watch?v=_jIBFev9OHM" class="video-link" target="_blank">10. SQL injection UNION attack, retrieving multiple values in a single column</a>
+                    <a href="https://www.youtube.com/watch?v=VTixMMS7iH4" class="video-link" target="_blank">11. Blind SQL injection with conditional responses</a>
+                    <a href="https://www.youtube.com/watch?v=rwofAL_tqlc" class="video-link" target="_blank">12. Blind SQL injection with conditional errors</a>
+                    <a href="https://www.youtube.com/watch?v=T7NvDO6Lfzk" class="video-link" target="_blank">13. Visible error-based SQL injection</a>
+                    <a href="https://www.youtube.com/watch?v=c19VOSMC5L0" class="video-link" target="_blank">14. Blind SQL injection with time delays</a>
+                    <a href="https://www.youtube.com/watch?v=mRYDtcu81q8" class="video-link" target="_blank">15. Blind SQL injection with time delays and information retrieval</a>
+                    <a href="#" class="video-link">16. Blind SQL injection with out-of-band interaction</a>
+                    <a href="#" class="video-link">17. Blind SQL injection with out-of-band data exfiltration</a>
+                    <a href="#" class="video-link">18. SQL injection with filter bypass via XML encoding</a>
                 </div>
             </div>
 
-            <!-- Cross-site Scripting -->
+            <!-- Cross-site scripting Section -->
             <div class="content-block">
                 <div class="divider">🔥┌───────────────────────🔥</div>
-                <h4>🛡️ Cross-site Scripting (XSS) 🛡️</h4>
+                <div class="category-header">
+                    <h4>🛡️ Cross-site scripting 🛡️</h4>
+                </div>
                 <div class="divider">🔒└───────────────────────🔒</div>
                 
-                <h4>🟢 APPRENTICE (مبتدئ)</h4>
-                <div class="lab-links">
-                    <a href="https://www.youtube.com/watch?v=_x7QkhExxVw" class="lab-link" target="_blank">1. Reflected XSS into HTML context with nothing encoded</a>
-                    <a href="https://www.youtube.com/watch?v=rBy2n3TmQL8" class="lab-link" target="_blank">2. Stored XSS into HTML context with nothing encoded</a>
-                    <a href="https://www.youtube.com/watch?v=BW3iVpjmt3s" class="lab-link" target="_blank">3. DOM XSS in document.write sink using source location.search</a>
-                    <a href="https://www.youtube.com/watch?v=uyq0CQ1-Kcs" class="lab-link" target="_blank">4. DOM XSS in innerHTML sink using source location.search</a>
-                    <a href="https://www.youtube.com/watch?v=fqQR9L2NYqc" class="lab-link" target="_blank">5. DOM XSS in jQuery anchor href attribute sink using location.search source</a>
-                    <div class="lab-text">6. DOM XSS in jQuery selector sink using a hashchange event</div>
-                    <div class="lab-text">7. Reflected XSS into attribute with angle brackets HTML-encoded</div>
-                    <div class="lab-text">8. Stored XSS into anchor href attribute with double quotes HTML-encoded</div>
-                    <div class="lab-text">9. Reflected XSS into a JavaScript string with angle brackets HTML encoded</div>
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=_x7QkhExxVw" class="video-link" target="_blank">1. Reflected XSS into HTML context with nothing encoded</a>
+                    <a href="https://www.youtube.com/watch?v=rBy2n3TmQL8" class="video-link" target="_blank">2. Stored XSS into HTML context with nothing encoded</a>
+                    <a href="https://www.youtube.com/watch?v=BW3iVpjmt3s" class="video-link" target="_blank">3. DOM XSS in document.write sink using source location.search</a>
+                    <a href="https://www.youtube.com/watch?v=uyq0CQ1-Kcs" class="video-link" target="_blank">4. DOM XSS in innerHTML sink using source location.search</a>
+                    <a href="https://www.youtube.com/watch?v=fqQR9L2NYqc" class="video-link" target="_blank">5. DOM XSS in jQuery anchor href attribute sink using location.search source</a>
+                    <a href="#" class="video-link">6. DOM XSS in jQuery selector sink using a hashchange event</a>
+                    <a href="#" class="video-link">7. Reflected XSS into attribute with angle brackets HTML-encoded</a>
+                    <a href="#" class="video-link">8. Stored XSS into anchor href attribute with double quotes HTML-encoded</a>
+                    <a href="#" class="video-link">9. Reflected XSS into a JavaScript string with angle brackets HTML encoded</a>
                 </div>
 
-                <h4>🔵 PRACTITIONER (متوسط)</h4>
-                <div class="lab-links">
-                    <div class="lab-text">10. DOM XSS in document.write sink using source location.search inside a select element</div>
-                    <div class="lab-text">11. DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded</div>
-                    <div class="lab-text">12. Reflected DOM XSS</div>
-                    <div class="lab-text">13. Stored DOM XSS</div>
-                    <div class="lab-text">14. Reflected XSS into HTML context with most tags and attributes blocked</div>
-                    <div class="lab-text">15. Reflected XSS into HTML context with all tags blocked except custom ones</div>
-                    <div class="lab-text">16. Reflected XSS with some SVG markup allowed</div>
-                    <div class="lab-text">17. Reflected XSS in canonical link tag</div>
-                    <div class="lab-text">18. Reflected XSS into a JavaScript string with single quote and backslash escaped</div>
-                    <div class="lab-text">19. Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped</div>
-                    <div class="lab-text">20. Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped</div>
-                    <div class="lab-text">21. Reflected XSS into a template literal with angle brackets, single, double quotes, backslash and backticks Unicode-escaped</div>
-                    <div class="lab-text">22. Exploiting cross-site scripting to steal cookies</div>
-                    <div class="lab-text">23. Exploiting cross-site scripting to capture passwords</div>
-                    <div class="lab-text">24. Exploiting XSS to bypass CSRF defenses</div>
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">10. DOM XSS in document.write sink using source location.search inside a select element</a>
+                    <a href="#" class="video-link">11. DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded</a>
+                    <a href="#" class="video-link">12. Reflected DOM XSS</a>
+                    <a href="#" class="video-link">13. Stored DOM XSS</a>
+                    <a href="#" class="video-link">14. Reflected XSS into HTML context with most tags and attributes blocked</a>
+                    <a href="#" class="video-link">15. Reflected XSS into HTML context with all tags blocked except custom ones</a>
+                    <a href="#" class="video-link">16. Reflected XSS with some SVG markup allowed</a>
+                    <a href="#" class="video-link">17. Reflected XSS in canonical link tag</a>
+                    <a href="#" class="video-link">18. Reflected XSS into a JavaScript string with single quote and backslash escaped</a>
+                    <a href="#" class="video-link">19. Reflected XSS into a JavaScript string with angle brackets and double quotes HTML-encoded and single quotes escaped</a>
+                    <a href="#" class="video-link">20. Stored XSS into onclick event with angle brackets and double quotes HTML-encoded and single quotes and backslash escaped</a>
+                    <a href="#" class="video-link">21. Reflected XSS into a template literal with angle brackets, single, double quotes, backslash and backticks Unicode-escaped</a>
+                    <a href="#" class="video-link">22. Exploiting cross-site scripting to steal cookies</a>
+                    <a href="#" class="video-link">23. Exploiting cross-site scripting to capture passwords</a>
+                    <a href="#" class="video-link">24. Exploiting XSS to bypass CSRF defenses</a>
                 </div>
 
-                <h4>🔴 EXPERT (متقدم)</h4>
-                <div class="lab-links">
-                    <div class="lab-text">25. Reflected XSS with AngularJS sandbox escape without strings</div>
-                    <div class="lab-text">26. Reflected XSS with AngularJS sandbox escape and CSP</div>
-                    <div class="lab-text">27. Reflected XSS with event handlers and href attributes blocked</div>
-                    <div class="lab-text">28. Reflected XSS in a JavaScript URL with some characters blocked</div>
-                    <div class="lab-text">29. Reflected XSS protected by very strict CSP, with dangling markup attack</div>
-                    <div class="lab-text">30. Reflected XSS protected by CSP, with CSP bypass</div>
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">25. Reflected XSS with AngularJS sandbox escape without strings</a>
+                    <a href="#" class="video-link">26. Reflected XSS with AngularJS sandbox escape and CSP</a>
+                    <a href="#" class="video-link">27. Reflected XSS with event handlers and href attributes blocked</a>
+                    <a href="#" class="video-link">28. Reflected XSS in a JavaScript URL with some characters blocked</a>
+                    <a href="#" class="video-link">29. Reflected XSS protected by very strict CSP, with dangling markup attack</a>
+                    <a href="#" class="video-link">30. Reflected XSS protected by CSP, with CSP bypass</a>
                 </div>
             </div>
 
-            <!-- CSRF -->
+            <!-- CSRF Section -->
             <div class="content-block">
                 <div class="divider">🔥┌───────────────────────🔥</div>
-                <h4>🛡️ Cross-site Request Forgery (CSRF) 🛡️</h4>
+                <div class="category-header">
+                    <h4>🛡️ Cross-site Request Forgery (CSRF) 🛡️</h4>
+                </div>
                 <div class="divider">🔒└───────────────────────🔒</div>
                 
-                <h4>🟢 APPRENTICE (مبتدئ)</h4>
-                <div class="lab-links">
-                    <div class="lab-text">1. CSRF vulnerability with no defenses</div>
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. CSRF vulnerability with no defenses</a>
                 </div>
 
-                <h4>🔵 PRACTITIONER (متوسط)</h4>
-                <div class="lab-links">
-                    <div class="lab-text">2. CSRF where token validation depends on request method</div>
-                    <div class="lab-text">3. CSRF where token validation depends on token being present</div>
-                    <div class="lab-text">4. CSRF where token is not tied to user session</div>
-                    <div class="lab-text">5. CSRF where token is tied to non-session cookie</div>
-                    <div class="lab-text">6. CSRF where token is duplicated in cookie</div>
-                    <div class="lab-text">7. SameSite Lax bypass via method override</div>
-                    <div class="lab-text">8. SameSite Strict bypass via client-side redirect</div>
-                    <div class="lab-text">9. SameSite Strict bypass via sibling domain</div>
-                    <div class="lab-text">10. SameSite Lax bypass via cookie refresh</div>
-                    <div class="lab-text">11. CSRF where Referer validation depends on header being present</div>
-                    <div class="lab-text">12. CSRF with broken Referer validation</div>
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. CSRF where token validation depends on request method</a>
+                    <a href="#" class="video-link">3. CSRF where token validation depends on token being present</a>
+                    <a href="#" class="video-link">4. CSRF where token is not tied to user session</a>
+                    <a href="#" class="video-link">5. CSRF where token is tied to non-session cookie</a>
+                    <a href="#" class="video-link">6. CSRF where token is duplicated in cookie</a>
+                    <a href="#" class="video-link">7. SameSite Lax bypass via method override</a>
+                    <a href="#" class="video-link">8. SameSite Strict bypass via client-side redirect</a>
+                    <a href="#" class="video-link">9. SameSite Strict bypass via sibling domain</a>
+                    <a href="#" class="video-link">10. SameSite Lax bypass via cookie refresh</a>
+                    <a href="#" class="video-link">11. CSRF where Referer validation depends on header being present</a>
+                    <a href="#" class="video-link">12. CSRF with broken Referer validation</a>
                 </div>
             </div>
 
-            <!-- Clickjacking -->
+            <!-- Clickjacking Section -->
             <div class="content-block">
                 <div class="divider">🔥┌───────────────────────🔥</div>
-                <h4>🛡️ Clickjacking 🛡️</h4>
+                <div class="category-header">
+                    <h4>🛡️ Clickjacking 🛡️</h4>
+                </div>
                 <div class="divider">🔒└───────────────────────🔒</div>
                 
-                <h4>🟢 APPRENTICE (مبتدئ)</h4>
-                <div class="lab-links">
-                    <a href="https://www.youtube.com/watch?v=aJPv5AoFXrI" class="lab-link" target="_blank">1. Basic clickjacking with CSRF token protection</a>
-                    <a href="https://www.youtube.com/watch?v=boJ9KHcktdg" class="lab-link" target="_blank">2. Clickjacking with form input data prefilled from a URL parameter</a>
-                    <a href="https://www.youtube.com/watch?v=YXg03a2NjPE" class="lab-link" target="_blank">3. Clickjacking with a frame buster script</a>
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=aJPv5AoFXrI" class="video-link" target="_blank">1. Basic clickjacking with CSRF token protection</a>
+                    <a href="https://www.youtube.com/watch?v=boJ9KHcktdg" class="video-link" target="_blank">2. Clickjacking with form input data prefilled from a URL parameter</a>
+                    <a href="https://www.youtube.com/watch?v=YXg03a2NjPE" class="video-link" target="_blank">3. Clickjacking with a frame buster script</a>
                 </div>
 
-                <h4>🔵 PRACTITIONER (متوسط)</h4>
-                <div class
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=E9MYZbT6vc8" class="video-link" target="_blank">4. Exploiting clickjacking vulnerability to trigger DOM-based XSS</a>
+                    <a href="https://www.youtube.com/watch?v=NDoRxN4vPUg" class="video-link" target="_blank">5. Multistep clickjacking</a>
+                </div>
+            </div>
+
+            <!-- ملاحظات نهائية -->
+            <div class="content-block" id="about">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>📌 ملاحظات نهائية</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <div class="info-box">
+                    <h4>معلومات مهمة:</h4>
+                    <ul>
+                        <li>جميع هذه المختبرات متاحة على موقع <a href="https://portswigger.net/web-security" target="_blank" style="color: var(--accent-blue);">PortSwigger</a></li>
+                        <li>يتم تحديث المختبرات دوريًا بإضافات جديدة</li>
+                        <li>يُنصح باستخدام Burp Suite Professional لحل معظم هذه المختبرات ولكن يمكنك أيضا استخدام المجاني</li>
+                        <li>تتراوح صعوبة المختبرات من المبتدئين إلى المتقدمين</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#content">المختبرات</a>
+            <a href="https://portswigger.net/web-security" target="_blank">موقع PortSwigger</a>
+            <a href="https://www.youtube.com/@DrProcess" target="_blank">قناة اليوتيوب</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@DrProcess" title="YouTube" target="_blank">📺</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="WhatsApp">💬</a>
+            <a href="#" title="Telegram">📱</a>
+        </div>
+        <p class="copyright">© 2026 Dr Process Academy. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix');
+        if (canvas.getContext) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const letters = '01';
+            const fontSize = 14;
+            const columns = canvas.width / fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(5, 8, 16, 0.03)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#00ff41';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = letters[Math.floor(Math.random() * letters.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(drawMatrix, 35);
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Mobile Menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
