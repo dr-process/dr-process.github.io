@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 مصادر خارجية للأمن السيبراني والهكر الأخلاقي - Dr Process Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #00ff41;
+            --dark-bg: #0a0e27;
+            --darker-bg: #050810;
+            --card-bg: #141b2d;
+            --accent-blue: #00d9ff;
+            --accent-purple: #b400ff;
+            --accent-orange: #ff6600;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --border-color: rgba(0, 255, 65, 0.2);
+            --glow-green: rgba(0, 255, 65, 0.3);
+            --glow-blue: rgba(0, 217, 255, 0.3);
+            --glow-purple: rgba(180, 0, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--darker-bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* Matrix Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 14, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--border-color);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 20px var(--glow-green);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            height: 46px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon img {
+            height: 46px;
+            width: auto;
+            filter: drop-shadow(0 0 6px rgba(0, 255, 170, 0.45));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+            background: rgba(0, 255, 65, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: all 0.3s;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover::after {
+            width: 80%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 30px;
+            height: 3px;
+            background: var(--primary-green);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 65, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(180, 0, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: rainbowGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes rainbowGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 10px var(--glow-green)) 
+                        drop-shadow(0 0 20px var(--glow-blue));
+            }
+            33% { 
+                filter: drop-shadow(0 0 10px var(--glow-blue)) 
+                        drop-shadow(0 0 20px var(--glow-purple));
+            }
+            66% { 
+                filter: drop-shadow(0 0 10px var(--glow-purple)) 
+                        drop-shadow(0 0 20px var(--glow-green));
+            }
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-green);
+            text-shadow: 0 0 15px var(--glow-green);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Categories Navigation */
+        .categories-nav {
+            background: var(--dark-bg);
+            border-bottom: 2px solid var(--border-color);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 80px;
+            z-index: 999;
+            backdrop-filter: blur(10px);
+        }
+
+        .categories-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background: rgba(0, 255, 65, 0.1);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-btn:hover {
+            background: rgba(0, 255, 65, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px var(--glow-green);
+        }
+
+        .category-btn.active {
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+            color: var(--darker-bg);
+            border-color: var(--primary-green);
+            box-shadow: 0 0 20px var(--glow-green);
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-section {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .category-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-green);
+            text-shadow: 0 0 10px var(--glow-green);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-blue));
+            border-radius: 2px;
+        }
+
+        /* Resources Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            height: 100%;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary-green);
+            box-shadow: 0 15px 40px var(--glow-green);
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-green), var(--accent-blue));
+            z-index: 1;
+        }
+
+        .resource-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: -35px auto 1.5rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 20px var(--glow-green);
+        }
+
+        .resource-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .resource-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .resource-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            min-height: 60px;
+        }
+
+        .resource-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(0, 255, 65, 0.1);
+            color: var(--primary-green);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .resource-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+            color: var(--darker-bg);
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        .resource-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--glow-green);
+        }
+
+        /* Featured Section */
+        .featured-section {
+            margin: 4rem 0;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, var(--card-bg), rgba(20, 27, 45, 0.9));
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+
+        .featured-card:hover {
+            border-color: var(--primary-green);
+            box-shadow: 0 10px 30px var(--glow-green);
+            transform: translateY(-5px);
+        }
+
+        .featured-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .featured-card ul {
+            list-style: none;
+            padding-right: 1rem;
+        }
+
+        .featured-card li {
+            margin-bottom: 0.8rem;
+            padding: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .featured-card li:hover {
+            background: rgba(0, 255, 65, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .featured-card a {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .featured-card a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Search Section */
+        .search-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            border-radius: 30px;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 20px var(--glow-green);
+        }
+
+        .search-btn {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: var(--primary-green);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* News Ticker */
+        .news-ticker {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 3rem 0;
+            overflow: hidden;
+        }
+
+        .ticker-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .ticker-content {
+            display: flex;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .news-item {
+            padding: 0 2rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        .news-item a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        .news-item a:hover {
+            color: var(--primary-green);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker-bg);
+            border-top: 2px solid var(--border-color);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h4 {
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-green);
+            padding-right: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-green);
+            color: var(--darker-bg);
+            transform: translateY(-5px) rotate(360deg);
+            box-shadow: 0 5px 20px var(--glow-green);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark-bg);
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .categories-container {
+                overflow-x: auto;
+                justify-content: flex-start;
+                padding-bottom: 1rem;
+            }
+            
+            .ticker-content {
+                animation: ticker 15s linear infinite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Matrix Background -->
+    <canvas class="matrix-bg" id="matrix"></canvas>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo" onclick="window.location.href='#'">
+                <div class="logo-icon">
+                    <img src="https://drprocess-icrivcbs.manus.space/dr-process-logo.png" alt="Dr Process Academy Logo">
+                </div>
+                <span>Dr Process Academy</span>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">🏠 الرئيسية</a></li>
+                <li><a href="#courses">🎓 الدورات</a></li>
+                <li><a href="#labs">🔬 المختبرات</a></li>
+                <li><a href="#tools">🛠️ الأدوات</a></li>
+                <li><a href="#news">📰 الأخبار</a></li>
+                <li><a href="#community">👥 المجتمع</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>🚀 مصادر خارجية للأمن السيبراني والهكر الأخلاقي</h1>
+            <p>بوابة شاملة لأفضل المصادر التعليمية، الأدوات، المختبرات، الأخبار والمجتمعات في عالم الأمن السيبراني</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">مصدر تعليمي</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">أداة مجانية</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">مختبر تفاعلي</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">تحديث مستمر</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Navigation -->
+    <section class="categories-nav">
+        <div class="categories-container">
+            <button class="category-btn active" data-category="all">🌐 الكل</button>
+            <button class="category-btn" data-category="learning">🎓 تعليمي</button>
+            <button class="category-btn" data-category="tools">🛠️ أدوات</button>
+            <button class="category-btn" data-category="labs">🔬 مختبرات</button>
+            <button class="category-btn" data-category="news">📰 أخبار</button>
+            <button class="category-btn" data-category="communities">👥 مجتمعات</button>
+            <button class="category-btn" data-category="certifications">📜 شهادات</button>
+            <button class="category-btn" data-category="challenges">⚔️ تحديات</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="🔍 ابحث عن مصادر، أدوات، مختبرات...">
+                <button class="search-btn">بحث</button>
+            </div>
+        </div>
+
+        <!-- News Ticker -->
+        <div class="news-ticker">
+            <div class="ticker-header">📢 أخبار وتحديثات سريعة:</div>
+            <div class="ticker-content">
+                <div class="news-item">🆕 إطلاق مختبرات PortSwigger جديدة - <a href="#">شاهد التفاصيل</a></div>
+                <div class="news-item">🔥 تحديث أدوات Kali Linux 2024.4 - <a href="#">تحميل الآن</a></div>
+                <div class="news-item">🎯 مسابقة CTF جديدة من TryHackMe - <a href="#">انضم الآن</a></div>
+                <div class="news-item">📢 مؤتمر Black Hat 2024 يبدأ غداً - <a href="#">مشاهدة مباشرة</a></div>
+                <div class="news-item">🛡️ تحديث أمني مهم لنظام Linux - <a href="#">قراءة التقرير</a></div>
+            </div>
+        </div>
+
+        <!-- All Resources Section -->
+        <div class="category-section active" id="all">
+            <h2 class="section-title">🌟 أفضل المصادر الخارجية</h2>
+            
+            <div class="resources-grid">
+                <!-- TryHackMe -->
+                <div class="resource-card" data-category="labs,learning">
+                    <div class="resource-icon">🎯</div>
+                    <div class="resource-content">
+                        <h3>TryHackMe</h3>
+                        <p>منصة تعليمية تفاعلية مع مختبرات عملية لتعلّم الأمن السيبراني من الصفر للإحتراف</p>
+                        <div class="resource-tags">
+                            <span class="tag">مختبرات</span>
+                            <span class="tag">تعليم</span>
+                            <span class="tag">CTF</span>
+                        </div>
+                        <a href="https://tryhackme.com" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- HackTheBox -->
+                <div class="resource-card" data-category="labs,challenges">
+                    <div class="resource-icon">🎲</div>
+                    <div class="resource-content">
+                        <h3>HackTheBox</h3>
+                        <p>منصة متقدمة لمختبرات القرصنة الأخلاقية وتحديات CTF للمحترفين</p>
+                        <div class="resource-tags">
+                            <span class="tag">متقدم</span>
+                            <span class="tag">CTF</span>
+                            <span class="tag">تحديات</span>
+                        </div>
+                        <a href="https://hackthebox.com" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- PortSwigger Academy -->
+                <div class="resource-card" data-category="labs,learning">
+                    <div class="resource-icon">🎯</div>
+                    <div class="resource-content">
+                        <h3>PortSwigger Academy</h3>
+                        <p>أكاديمية مجانية مع مختبرات عملية لتعلم أمن تطبيقات الويب من مطوري Burp Suite</p>
+                        <div class="resource-tags">
+                            <span class="tag">ويب</span>
+                            <span class="tag">مجاني</span>
+                            <span class="tag">مختبرات</span>
+                        </div>
+                        <a href="https://portswigger.net/web-security" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- Kali Tools -->
+                <div class="resource-card" data-category="tools">
+                    <div class="resource-icon">🛠️</div>
+                    <div class="resource-content">
+                        <h3>أدوات Kali Linux</h3>
+                        <p>مجموعة شاملة من أدوات الأمن السيبراني المتاحة في توزيعة Kali Linux</p>
+                        <div class="resource-tags">
+                            <span class="tag">أدوات</span>
+                            <span class="tag">لينكس</span>
+                            <span class="tag">قرصنة</span>
+                        </div>
+                        <a href="https://www.kali.org/tools/" class="resource-link" target="_blank">استعراض الأدوات</a>
+                    </div>
+                </div>
+
+                <!-- OWASP -->
+                <div class="resource-card" data-category="learning">
+                    <div class="resource-icon">🛡️</div>
+                    <div class="resource-content">
+                        <h3>OWASP Foundation</h3>
+                        <p>مؤسسة رائدة في أمن تطبيقات الويب مع أدلة ومشاريع مفتوحة المصدر</p>
+                        <div class="resource-tags">
+                            <span class="tag">ويب</span>
+                            <span class="tag">تعليم</span>
+                            <span class="tag">مصادر</span>
+                        </div>
+                        <a href="https://owasp.org" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
+                </div>
+
+                <!-- Cyber Security News -->
+                <div class="resource-card" data-category="news">
+                    <div class="resource-icon">📰</div>
+                    <div class="resource-content">
+                        <h3>Cyber Security News</h3>
+                        <p>أحدث الأخبار والتحديثات الأمنية والثغرات المكتشفة حديثاً</p>
+                        <div class="resource-tags">
+                            <span class="tag">أخبار</span>
+                            <span class="tag">تحديثات</span>
+                            <span class="tag">أمن</span>
+                        </div>
+                        <a href="https://thehackernews.com" class="resource-link" target="_blank">قراءة الأخبار</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Resources -->
+        <div class="featured-section">
+            <h2 class="section-title">💎 مصادر مميزة حسب التصنيف</h2>
+            
+            <div class="featured-grid">
+                <!-- Learning Resources -->
+                <div class="featured-card">
+                    <h3>📚 مصادر تعليمية</h3>
+                    <ul>
+                        <li><a href="https://cybrary.it" target="_blank">Cybrary - دورات مجانية</a></li>
+                        <li><a href="https://www.sans.org/free/" target="_blank">SANS Free Resources</a></li>
+                        <li><a href="https://www.coursera.org/cybersecurity" target="_blank">Coursera Cybersecurity</a></li>
+                        <li><a href="https://www.edx.org/cybersecurity" target="_blank">edX Cybersecurity</a></li>
+                        <li><a href="https://www.youtube.com/c/NetworkChuck" target="_blank">NetworkChuck (يوتيوب)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="featured-card">
+                    <h3>🔧 أدوات أساسية</h3>
+                    <ul>
+                        <li><a href="https://www.wireshark.org" target="_blank">Wireshark - تحليل الشبكات</a></li>
+                        <li><a href="https://nmap.org" target="_blank">Nmap - مسح الشبكات</a></li>
+                        <li><a href="https://www.metasploit.com" target="_blank">Metasploit - اختبار الاختراق</a></li>
+                        <li><a href="https://www.openvas.org" target="_blank">OpenVAS - فحص الثغرات</a></li>
+                        <li><a href="https://www.sqlmap.org" target="_blank">sqlmap - حقن SQL</a></li>
+                    </ul>
+                </div>
+
+                <!-- Communities -->
+                <div class="featured-card">
+                    <h3>👥 مجتمعات تفاعلية</h3>
+                    <ul>
+                        <li><a href="https://www.reddit.com/r/cybersecurity" target="_blank">Reddit Cybersecurity</a></li>
+                        <li><a href="https://discord.gg/cybersecurity" target="_blank">Discord Cybersecurity</a></li>
+                        <li><a href="https://stackoverflow.com/questions/tagged/security" target="_blank">Stack Overflow Security</a></li>
+                        <li><a href="https://www.linkedin.com/groups/cybersecurity" target="_blank">LinkedIn Groups</a></li>
+                        <li><a href="https://t.me/cybersecurity_ar" target="_blank">Telegram Arabic Security</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Resources Grid -->
+        <div class="resources-grid">
+            <!-- OverTheWire -->
+            <div class="resource-card" data-category="labs,challenges">
+                <div class="resource-icon">⚔️</div>
+                <div class="resource-content">
+                    <h3>OverTheWire</h3>
+                    <p>تحديات WarGames لتعلم أساسيات الأمن السيبراني والقرصنة الأخلاقية</p>
+                    <div class="resource-tags">
+                        <span class="tag">تحديات</span>
+                        <span class="tag">مبتدئ</span>
+                        <span class="tag">تعليم</span>
+                    </div>
+                    <a href="https://overthewire.org/wargames/" class="resource-link" target="_blank">بدء التحدي</a>
+                </div>
+            </div>
+
+            <!-- PentesterLab -->
+            <div class="resource-card" data-category="labs,learning">
+                <div class="resource-icon">🔓</div>
+                <div class="resource-content">
+                    <h3>PentesterLab</h3>
+                    <p>مختبرات عملية لتعلم اختبار الاختراق مع تمارين تفاعلية</p>
+                    <div class="resource-tags">
+                        <span class="tag">مختبرات</span>
+                        <span class="tag">اختبار اختراق</span>
+                        <span class="tag">ويب</span>
+                    </div>
+                    <a href="https://pentesterlab.com" class="resource-link" target="_blank">زيارة الموقع</a>
+                </div>
+            </div>
+
+            <!-- VulnHub -->
+            <div class="resource-card" data-category="labs">
+                <div class="resource-icon">🎮</div>
+                <div class="resource-content">
+                    <h3>VulnHub</h3>
+                    <p>منصة لمشاركة وتحميل آلات افتراضية مع ثغرات للتدريب العملي</p>
+                    <div class="resource-tags">
+                        <span class="tag">VM</span>
+                        <span class="tag">مختبرات</span>
+                        <span class="tag">متقدم</span>
+                    </div>
+                    <a href="https://www.vulnhub.com" class="resource-link" target="_blank">تحميل آلات</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">🏠 الرئيسية</a></li>
+                        <li><a href="#courses">🎓 مصادر تعليمية</a></li>
+                        <li><a href="#tools">🛠️ أدوات مجانية</a></li>
+                        <li><a href="#labs">🔬 مختبرات تفاعلية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>مواقع رسمية</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://portswigger.net" target="_blank">PortSwigger</a></li>
+                        <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
+                        <li><a href="https://hackthebox.com" target="_blank">HackTheBox</a></li>
+                        <li><a href="https://owasp.org" target="_blank">OWASP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>مصادر عربية</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">منصة سايبر العربية</a></li>
+                        <li><a href="#">مدونة الأمن السيبراني</a></li>
+                        <li><a href="#">مجتمع القرصنة الأخلاقية</a></li>
+                        <li><a href="#">دورات عربية مجانية</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>اتصل بنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:info@drprocess.com">📧 البريد الإلكتروني</a></li>
+                        <li><a href="#">📞 الدعم الفني</a></li>
+                        <li><a href="#">💬 اقتراحات</a></li>
+                        <li><a href="#">📋 الإبلاغ عن خطأ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.youtube.com/@DrProcess" title="YouTube" target="_blank">📺</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="GitHub">💻</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="Telegram">📱</a>
+                <a href="#" title="Discord">🎮</a>
+            </div>
+            
+            <p class="copyright">© 2024 Dr Process Academy. جميع المصادر الخارجية مملوكة لأصحابها الأصليين.<br>
+            تم تصميم هذه الصفحة لجمع وتنظيم أفضل مصادر الأمن السيبراني للمجتمع العربي.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Matrix Rain Effect
+        const canvas = document.getElementById('matrix');
+        if (canvas.getContext) {
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const letters = '01';
+            const fontSize = 14;
+            const columns = canvas.width / fontSize;
+            const drops = Array(Math.floor(columns)).fill(1);
+
+            function drawMatrix() {
+                ctx.fillStyle = 'rgba(5, 8, 16, 0.03)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = '#00ff41';
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = letters[Math.floor(Math.random() * letters.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(drawMatrix, 35);
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Category Filtering
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        const categorySections = document.querySelectorAll('.category-section');
+        const resourceCards = document.querySelectorAll('.resource-card');
+
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const category = button.getAttribute('data-category');
+                
+                // Show/hide sections
+                categorySections.forEach(section => {
+                    if (category === 'all' || section.id === category) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+                
+                // Filter cards in "all" section
+                if (category === 'all') {
+                    resourceCards.forEach(card => card.style.display = 'block');
+                } else {
+                    resourceCards.forEach(card => {
+                        const cardCategories = card.getAttribute('data-category');
+                        if (cardCategories && cardCategories.includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchBtn = document.querySelector('.search-btn');
+
+        function performSearch() {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            resourceCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
+                
+                if (title.includes(searchTerm) || 
+                    description.includes(searchTerm) || 
+                    tags.some(tag => tag.includes(searchTerm))) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show all section when searching
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            document.querySelector('[data-category="all"]').classList.add('active');
+            categorySections.forEach(section => {
+                if (section.id === 'all') {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animate cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.resource-card, .featured-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // Ticker hover pause
+        const ticker = document.querySelector('.ticker-content');
+        ticker.addEventListener('mouseenter', () => {
+            ticker.style.animationPlayState = 'paused';
+        });
+        
+        ticker.addEventListener('mouseleave', () => {
+            ticker.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>
