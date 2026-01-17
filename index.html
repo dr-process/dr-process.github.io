@@ -22,6 +22,9 @@
             --text-secondary: #a0a0a0;
             --border-color: rgba(0, 255, 65, 0.2);
             --glow-green: rgba(0, 255, 65, 0.3);
+            /* الألوان الزرقاء الجديدة */
+            --primary-blue: #00d9ff;
+            --dark-blue: #0066cc;
         }
 
         body {
@@ -63,26 +66,24 @@
             margin: 0 auto;
         }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.logo-icon {
-    height: 46px;
-    display: flex;
-    align-items: center;
-}
+        .logo-icon {
+            height: 46px;
+            display: flex;
+            align-items: center;
+        }
 
         .logo-icon img {
-    height: 46px;
-    width: auto;
-    max-width: none;
-    filter: drop-shadow(0 0 6px rgba(0, 255, 170, 0.45));
-}
-
-
+            height: 46px;
+            width: auto;
+            max-width: none;
+            filter: drop-shadow(0 0 6px rgba(0, 255, 170, 0.45));
+        }
 
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
@@ -126,20 +127,30 @@
             width: 80%;
         }
 
+        /* زر "ابدأ الآن" بالتنسيق الجديد */
         .cta-button {
-            background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
-            color: var(--darker-bg);
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            color: white;
             padding: 0.7rem 1.5rem;
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s;
-            box-shadow: 0 0 20px var(--glow-green);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: badgePulse 3s infinite;
         }
 
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px var(--glow-green);
+            box-shadow: 0 0 30px rgba(0, 217, 255, 0.5);
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         /* Hero Section */
@@ -597,9 +608,10 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo-icon">
-    <img src="https://drprocess-icrivcbs.manus.space/dr-process-logo.png" alt="Dr Process Academy Logo">
-</div>
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="https://drprocess-icrivcbs.manus.space/dr-process-logo.png" alt="Dr Process Academy Logo">
+                </div>
                 <span>Dr Process Academy</span>
             </div>
             <div class="menu-toggle" onclick="toggleMenu()">
@@ -614,7 +626,11 @@
                 <li><a href="https://dr-process.github.io/private">المحتوى الخاص</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
             </ul>
-            <a href="https://dr-process.github.io/guide.html" class="cta-button">ابدأ الآن</a>
+            <!-- زر "ابدأ الآن" بالتنسيق الجديد -->
+            <a href="https://dr-process.github.io/guide.html" class="cta-button">
+                <span>🚀</span>
+                <span>ابدأ الآن</span>
+            </a>
         </nav>
     </header>
 
@@ -623,7 +639,7 @@
         <div class="hero-content fade-in">
             <h1 class="rtl-title">Dr Process أكاديمية</h1>
             <p>أمن سيبراني - هكر أخلاقي - اختبار اختراق</p>
-			<p>رحلتك الاحترافية في عالم الأمن السيبراني تبدأ من هنا… فأهلا وسهلا بك</p>
+            <p>رحلتك الاحترافية في عالم الأمن السيبراني تبدأ من هنا… فأهلا وسهلا بك</p>
             <div class="hero-buttons">
                 <a href="https://dr-process.github.io/guide.html" class="btn-primary">استكشف المحتوى التعليمي</a>
 <!--                <a href="#" class="btn-secondary">تعرف علينا</a> -->
@@ -644,7 +660,7 @@
                 <a href="https://www.instagram.com/dr.process" title="Instagram">🐦</a>
                 <a href="https://www.tiktok.com/@dr.process" title="TikTok">💼</a>
                 <a href="https://whatsapp.com/channel/0029Vb6d0VHDJ6H1iNCGHR3o" title="WhatsApp">💬</a>
-				<a href="https://t.me/dr_process" title="Telegram">💬</a>
+                <a href="https://t.me/dr_process" title="Telegram">💬</a>
             </div>
             <p class="copyright">© 2026 Dr Process Academy. جميع الحقوق محفوظة.</p>
         </div>
