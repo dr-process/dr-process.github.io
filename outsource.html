@@ -491,92 +491,6 @@
             color: var(--primary-green);
         }
 
-        /* Search Section */
-        .search-section {
-            margin: 4rem 0;
-            text-align: center;
-        }
-
-        .search-box {
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 1rem 2rem;
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            border-radius: 30px;
-            color: var(--text-primary);
-            font-size: 1.1rem;
-            transition: all 0.3s;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: var(--primary-green);
-            box-shadow: 0 0 20px var(--glow-green);
-        }
-
-        .search-btn {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: transparent;
-            border: none;
-            color: var(--primary-green);
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-
-        /* News Ticker */
-        .news-ticker {
-            background: rgba(0, 255, 65, 0.1);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 1rem;
-            margin: 3rem 0;
-            overflow: hidden;
-        }
-
-        .ticker-header {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-green);
-            font-weight: bold;
-        }
-
-        .ticker-content {
-            display: flex;
-            animation: ticker 30s linear infinite;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-
-        .news-item {
-            padding: 0 2rem;
-            color: var(--text-secondary);
-            white-space: nowrap;
-        }
-
-        .news-item a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        .news-item a:hover {
-            color: var(--primary-green);
-            text-decoration: underline;
-        }
-
         /* Footer */
         footer {
             background: var(--darker-bg);
@@ -660,6 +574,108 @@
             border-top: 1px solid var(--border-color);
         }
 
+        /* Challenges Section */
+        .challenges-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .challenge-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .challenge-item:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+
+        .challenge-item h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        /* News Section */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .news-item-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .news-item-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+
+        .news-item-card h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .news-date {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Certifications Section */
+        .certifications-info {
+            background: linear-gradient(135deg, var(--card-bg), rgba(20, 27, 45, 0.9));
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .certification-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .certification-item:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+        }
+
+        .certification-item h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-level {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background: rgba(0, 255, 65, 0.1);
+            color: var(--primary-green);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 0.5rem 0;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -702,10 +718,6 @@
                 justify-content: flex-start;
                 padding-bottom: 1rem;
             }
-            
-            .ticker-content {
-                animation: ticker 15s linear infinite;
-            }
         }
     </style>
 </head>
@@ -728,12 +740,11 @@
                 <span></span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">🏠 الرئيسية</a></li>
-                <li><a href="#courses">🎓 الدورات</a></li>
-                <li><a href="#labs">🔬 المختبرات</a></li>
-                <li><a href="#tools">🛠️ الأدوات</a></li>
-                <li><a href="#news">📰 الأخبار</a></li>
-                <li><a href="#community">👥 المجتمع</a></li>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="https://dr-process.github.io/guide.html">المحتوى التعليمي</a></li>
+                <li><a href="https://dr-process.github.io/outsource.html">مصادر خارجية</a></li>
+                <li><a href="https://dr-process.github.io/private.html">المحتوى الخاص</a></li>
+                <li><a href="https://dr-process.github.io/contact.html">تواصل معنا</a></li>
             </ul>
         </nav>
     </header>
@@ -767,40 +778,17 @@
     <!-- Categories Navigation -->
     <section class="categories-nav">
         <div class="categories-container">
-            <button class="category-btn active" data-category="all">🌐 الكل</button>
-            <button class="category-btn" data-category="learning">🎓 تعليمي</button>
-            <button class="category-btn" data-category="tools">🛠️ أدوات</button>
-            <button class="category-btn" data-category="labs">🔬 مختبرات</button>
-            <button class="category-btn" data-category="news">📰 أخبار</button>
-            <button class="category-btn" data-category="communities">👥 مجتمعات</button>
-            <button class="category-btn" data-category="certifications">📜 شهادات</button>
-            <button class="category-btn" data-category="challenges">⚔️ تحديات</button>
+            <button class="category-btn active" data-category="all">الكل</button>
+            <button class="category-btn" data-category="learning">مواقع تعليمية</button>
+            <button class="category-btn" data-category="tools">أدوات</button>
+            <button class="category-btn" data-category="challenges">تحديات</button>
+            <button class="category-btn" data-category="certifications">الشهادات</button>
         </div>
     </section>
 
     <!-- Main Content -->
     <section class="content-section">
         
-        <!-- Search Section -->
-        <div class="search-section">
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="🔍 ابحث عن مصادر، أدوات، مختبرات...">
-                <button class="search-btn">بحث</button>
-            </div>
-        </div>
-
-        <!-- News Ticker -->
-        <div class="news-ticker">
-            <div class="ticker-header">📢 أخبار وتحديثات سريعة:</div>
-            <div class="ticker-content">
-                <div class="news-item">🆕 إطلاق مختبرات PortSwigger جديدة - <a href="#">شاهد التفاصيل</a></div>
-                <div class="news-item">🔥 تحديث أدوات Kali Linux 2024.4 - <a href="#">تحميل الآن</a></div>
-                <div class="news-item">🎯 مسابقة CTF جديدة من TryHackMe - <a href="#">انضم الآن</a></div>
-                <div class="news-item">📢 مؤتمر Black Hat 2024 يبدأ غداً - <a href="#">مشاهدة مباشرة</a></div>
-                <div class="news-item">🛡️ تحديث أمني مهم لنظام Linux - <a href="#">قراءة التقرير</a></div>
-            </div>
-        </div>
-
         <!-- All Resources Section -->
         <div class="category-section active" id="all">
             <h2 class="section-title">🌟 أفضل المصادر الخارجية</h2>
@@ -898,142 +886,297 @@
             </div>
         </div>
 
-        <!-- Featured Resources -->
-        <div class="featured-section">
-            <h2 class="section-title">💎 مصادر مميزة حسب التصنيف</h2>
+        <!-- Learning Resources Section -->
+        <div class="category-section" id="learning">
+            <h2 class="section-title">🎓 مواقع تعليمية</h2>
             
-            <div class="featured-grid">
-                <!-- Learning Resources -->
-                <div class="featured-card">
-                    <h3>📚 مصادر تعليمية</h3>
-                    <ul>
-                        <li><a href="https://cybrary.it" target="_blank">Cybrary - دورات مجانية</a></li>
-                        <li><a href="https://www.sans.org/free/" target="_blank">SANS Free Resources</a></li>
-                        <li><a href="https://www.coursera.org/cybersecurity" target="_blank">Coursera Cybersecurity</a></li>
-                        <li><a href="https://www.edx.org/cybersecurity" target="_blank">edX Cybersecurity</a></li>
-                        <li><a href="https://www.youtube.com/c/NetworkChuck" target="_blank">NetworkChuck (يوتيوب)</a></li>
-                    </ul>
+            <div class="resources-grid">
+                <!-- Cybrary -->
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <div class="resource-content">
+                        <h3>Cybrary</h3>
+                        <p>منصة تعليمية شاملة مع آلاف الدورات المجانية في الأمن السيبراني</p>
+                        <div class="resource-tags">
+                            <span class="tag">دورات</span>
+                            <span class="tag">مجانية</span>
+                            <span class="tag">تعليم</span>
+                        </div>
+                        <a href="https://cybrary.it" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
                 </div>
 
-                <!-- Tools -->
-                <div class="featured-card">
-                    <h3>🔧 أدوات أساسية</h3>
-                    <ul>
-                        <li><a href="https://www.wireshark.org" target="_blank">Wireshark - تحليل الشبكات</a></li>
-                        <li><a href="https://nmap.org" target="_blank">Nmap - مسح الشبكات</a></li>
-                        <li><a href="https://www.metasploit.com" target="_blank">Metasploit - اختبار الاختراق</a></li>
-                        <li><a href="https://www.openvas.org" target="_blank">OpenVAS - فحص الثغرات</a></li>
-                        <li><a href="https://www.sqlmap.org" target="_blank">sqlmap - حقن SQL</a></li>
-                    </ul>
+                <!-- SANS -->
+                <div class="resource-card">
+                    <div class="resource-icon">🎓</div>
+                    <div class="resource-content">
+                        <h3>SANS Institute</h3>
+                        <p>معهد رائد في التدريب والبحث في مجال الأمن السيبراني</p>
+                        <div class="resource-tags">
+                            <span class="tag">متقدم</span>
+                            <span class="tag">تدريب</span>
+                            <span class="tag">معتمد</span>
+                        </div>
+                        <a href="https://www.sans.org" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
                 </div>
 
-                <!-- Communities -->
-                <div class="featured-card">
-                    <h3>👥 مجتمعات تفاعلية</h3>
-                    <ul>
-                        <li><a href="https://www.reddit.com/r/cybersecurity" target="_blank">Reddit Cybersecurity</a></li>
-                        <li><a href="https://discord.gg/cybersecurity" target="_blank">Discord Cybersecurity</a></li>
-                        <li><a href="https://stackoverflow.com/questions/tagged/security" target="_blank">Stack Overflow Security</a></li>
-                        <li><a href="https://www.linkedin.com/groups/cybersecurity" target="_blank">LinkedIn Groups</a></li>
-                        <li><a href="https://t.me/cybersecurity_ar" target="_blank">Telegram Arabic Security</a></li>
-                    </ul>
+                <!-- Coursera -->
+                <div class="resource-card">
+                    <div class="resource-icon">🏫</div>
+                    <div class="resource-content">
+                        <h3>Coursera</h3>
+                        <p>دورات معتمدة من جامعات عالمية في مجال الأمن السيبراني</p>
+                        <div class="resource-tags">
+                            <span class="tag">جامعات</span>
+                            <span class="tag">معتمد</span>
+                            <span class="tag">دورات</span>
+                        </div>
+                        <a href="https://www.coursera.org/cybersecurity" class="resource-link" target="_blank">زيارة الموقع</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- More Resources Grid -->
-        <div class="resources-grid">
-            <!-- OverTheWire -->
-            <div class="resource-card" data-category="labs,challenges">
-                <div class="resource-icon">⚔️</div>
-                <div class="resource-content">
-                    <h3>OverTheWire</h3>
-                    <p>تحديات WarGames لتعلم أساسيات الأمن السيبراني والقرصنة الأخلاقية</p>
-                    <div class="resource-tags">
-                        <span class="tag">تحديات</span>
-                        <span class="tag">مبتدئ</span>
-                        <span class="tag">تعليم</span>
+        <!-- Tools Section -->
+        <div class="category-section" id="tools">
+            <h2 class="section-title">🛠️ أدوات أساسية</h2>
+            
+            <div class="featured-section">
+                <div class="featured-grid">
+                    <!-- Tools Card -->
+                    <div class="featured-card">
+                        <h3>🔧 أدوات أساسية</h3>
+                        <ul>
+                            <li><a href="https://www.wireshark.org" target="_blank">Wireshark - تحليل الشبكات</a></li>
+                            <li><a href="https://nmap.org" target="_blank">Nmap - مسح الشبكات</a></li>
+                            <li><a href="https://www.metasploit.com" target="_blank">Metasploit - اختبار الاختراق</a></li>
+                            <li><a href="https://www.openvas.org" target="_blank">OpenVAS - فحص الثغرات</a></li>
+                            <li><a href="https://www.sqlmap.org" target="_blank">sqlmap - حقن SQL</a></li>
+                        </ul>
                     </div>
-                    <a href="https://overthewire.org/wargames/" class="resource-link" target="_blank">بدء التحدي</a>
+
+                    <!-- More Tools -->
+                    <div class="featured-card">
+                        <h3>⚡ أدوات متقدمة</h3>
+                        <ul>
+                            <li><a href="https://www.burpsuite.com" target="_blank">Burp Suite - اختبار تطبيقات الويب</a></li>
+                            <li><a href="https://www.tenable.com/products/nessus" target="_blank">Nessus - فحص الثغرات</a></li>
+                            <li><a href="https://github.com" target="_blank">GitHub - أدوات مفتوحة المصدر</a></li>
+                            <li><a href="https://www.autopsy.com" target="_blank">Autopsy - التحقيق الجنائي الرقمي</a></li>
+                            <li><a href="https://www.splunk.com" target="_blank">Splunk - تحليل البيانات الأمنية</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kali Tools -->
+                    <div class="featured-card">
+                        <h3>🐉 أدوات Kali Linux</h3>
+                        <ul>
+                            <li><a href="https://tools.kali.org/information-gathering" target="_blank">أدوات جمع المعلومات</a></li>
+                            <li><a href="https://tools.kali.org/vulnerability-analysis" target="_blank">تحليل الثغرات</a></li>
+                            <li><a href="https://tools.kali.org/web-applications" target="_blank">تطبيقات الويب</a></li>
+                            <li><a href="https://tools.kali.org/password-attacks" target="_blank">هجمات كلمات المرور</a></li>
+                            <li><a href="https://tools.kali.org/wireless-attacks" target="_blank">هجمات الشبكات اللاسلكية</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- PentesterLab -->
-            <div class="resource-card" data-category="labs,learning">
-                <div class="resource-icon">🔓</div>
-                <div class="resource-content">
-                    <h3>PentesterLab</h3>
-                    <p>مختبرات عملية لتعلم اختبار الاختراق مع تمارين تفاعلية</p>
-                    <div class="resource-tags">
-                        <span class="tag">مختبرات</span>
-                        <span class="tag">اختبار اختراق</span>
-                        <span class="tag">ويب</span>
-                    </div>
-                    <a href="https://pentesterlab.com" class="resource-link" target="_blank">زيارة الموقع</a>
+        <!-- Challenges Section -->
+        <div class="category-section" id="challenges">
+            <h2 class="section-title">⚔️ تحديات وألعاب حربية</h2>
+            
+            <div class="challenges-list">
+                <!-- OverTheWire -->
+                <div class="challenge-item">
+                    <h4>OverTheWire - Wargames</h4>
+                    <p>تحديات تعليمية لتعلم أساسيات الأمن السيبراني من خلال ألعاب حربية تفاعلية</p>
+                    <p><strong>المستوى:</strong> مبتدئ إلى متقدم</p>
+                    <a href="https://overthewire.org/wargames/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">بدء التحدي</a>
                 </div>
-            </div>
 
-            <!-- VulnHub -->
-            <div class="resource-card" data-category="labs">
-                <div class="resource-icon">🎮</div>
-                <div class="resource-content">
-                    <h3>VulnHub</h3>
+                <!-- CTFlearn -->
+                <div class="challenge-item">
+                    <h4>CTFlearn</h4>
+                    <p>منصة لتحديات CTF متنوعة مع مجتمع نشط للمنافسة والتعلم</p>
+                    <p><strong>المستوى:</strong> جميع المستويات</p>
+                    <a href="https://ctflearn.com" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">الانضمام</a>
+                </div>
+
+                <!-- PicoCTF -->
+                <div class="challenge-item">
+                    <h4>PicoCTF</h4>
+                    <p>تحديات CTF مصممة للمبتدئين من قبل جامعة Carnegie Mellon</p>
+                    <p><strong>المستوى:</strong> مبتدئ إلى متوسط</p>
+                    <a href="https://picoctf.org" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">بدء التحدي</a>
+                </div>
+
+                <!-- Root-Me -->
+                <div class="challenge-item">
+                    <h4>Root-Me</h4>
+                    <p>منصة فرنسية لتحديات القرصنة الأخلاقية والتدريب العملي</p>
+                    <p><strong>المستوى:</strong> متوسط إلى متقدم</p>
+                    <a href="https://www.root-me.org" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">زيارة الموقع</a>
+                </div>
+
+                <!-- VulnHub -->
+                <div class="challenge-item">
+                    <h4>VulnHub</h4>
                     <p>منصة لمشاركة وتحميل آلات افتراضية مع ثغرات للتدريب العملي</p>
-                    <div class="resource-tags">
-                        <span class="tag">VM</span>
-                        <span class="tag">مختبرات</span>
-                        <span class="tag">متقدم</span>
-                    </div>
-                    <a href="https://www.vulnhub.com" class="resource-link" target="_blank">تحميل آلات</a>
+                    <p><strong>المستوى:</strong> متوسط إلى متقدم</p>
+                    <a href="https://www.vulnhub.com" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">تحميل آلات</a>
+                </div>
+
+                <!-- PentesterLab -->
+                <div class="challenge-item">
+                    <h4>PentesterLab</h4>
+                    <p>مختبرات عملية لتعلم اختبار الاختراق مع تمارين تفاعلية</p>
+                    <p><strong>المستوى:</strong> جميع المستويات</p>
+                    <a href="https://pentesterlab.com" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">البدء</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Section -->
+        <div class="category-section" id="news">
+            <h2 class="section-title">📰 آخر الأخبار والتحديثات</h2>
+            
+            <div class="news-grid">
+                <!-- News Item 1 -->
+                <div class="news-item-card">
+                    <div class="news-date">ديسمبر 2024</div>
+                    <h4>إطلاق Kali Linux 2024.4</h4>
+                    <p>أحدث إصدار من توزيعة القرصنة الأخلاقية مع أدوات جديدة وتحسينات في الأداء</p>
+                    <a href="https://www.kali.org/blog/kali-linux-2024-4-release/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">قراءة المزيد</a>
+                </div>
+
+                <!-- News Item 2 -->
+                <div class="news-item-card">
+                    <div class="news-date">نوفمبر 2024</div>
+                    <h4>تحديثات أمان لويندوز 11</h4>
+                    <p>مايكروسوفت تطلق تحديثات أمنية مهمة لإصلاح ثغرات حرجة في نظام التشغيل</p>
+                    <a href="https://msrc.microsoft.com/update-guide" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
+                </div>
+
+                <!-- News Item 3 -->
+                <div class="news-item-card">
+                    <div class="news-date">أكتوبر 2024</div>
+                    <h4>مؤتمر Black Hat Europe 2024</h4>
+                    <p>أهم المؤتمرات الأمنية في أوروبا مع أوراق بحثية وتدريبات متقدمة</p>
+                    <a href="https://www.blackhat.com/eu-24/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">مشاهدة الجلسات</a>
+                </div>
+
+                <!-- News Item 4 -->
+                <div class="news-item-card">
+                    <div class="news-date">سبتمبر 2024</div>
+                    <h4>تقرير Verizon لانتهاكات البيانات 2024</h4>
+                    <p>تحليل شامل لأهم انخراقات البيانات وأنماط الهجمات الإلكترونية العالمية</p>
+                    <a href="https://www.verizon.com/business/resources/reports/dbir/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">تحميل التقرير</a>
+                </div>
+
+                <!-- News Item 5 -->
+                <div class="news-item-card">
+                    <div class="news-date">أغسطس 2024</div>
+                    <h4>إطلاق تحديثات OWASP Top 10 2024</h4>
+                    <p>أحدث قائمة لأهم 10 ثغرات أمنية في تطبيقات الويب من مؤسسة OWASP</p>
+                    <a href="https://owasp.org/www-project-top-ten/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">عرض القائمة</a>
+                </div>
+
+                <!-- News Item 6 -->
+                <div class="news-item-card">
+                    <div class="news-date">يوليو 2024</div>
+                    <h4>تقرير Gartner عن مستقبل الأمن السيبراني</h4>
+                    <p>رؤى استراتيجية وتوقعات لتطور مجال الأمن السيبراني في السنوات القادمة</p>
+                    <a href="https://www.gartner.com/en/cybersecurity" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">المزيد</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Section -->
+        <div class="category-section" id="certifications">
+            <h2 class="section-title">📜 الشهادات الاحترافية</h2>
+            
+            <div class="certifications-info">
+                <h3>ما هي الشهادات الاحترافية في الأمن السيبراني؟</h3>
+                <p>الشهادات الاحترافية هي اعتمادات معترف بها عالمياً تُثبت كفاءة حاملها في مجال الأمن السيبراني. تساعد هذه الشهادات في:</p>
+                <ul>
+                    <li>تحسين فرص التوظيف والترقية</li>
+                    <li>زيادة الراتب والمزايا</li>
+                    <li>تطوير المهارات العملية</li>
+                    <li>الاعتراف بالخبرة في السوق العالمية</li>
+                    <li>الالتزام بالمعايير المهنية الدولية</li>
+                </ul>
+            </div>
+            
+            <div class="certifications-grid">
+                <!-- CEH -->
+                <div class="certification-item">
+                    <h4>CEH - Certified Ethical Hacker</h4>
+                    <span class="cert-level">مستوى: مبتدئ إلى متوسط</span>
+                    <p>شهادة معتمدة في القرصنة الأخلاقية من EC-Council، تركز على أدوات وتقنيات الاختراق الأخلاقي</p>
+                    <p><strong>الجهة المانحة:</strong> EC-Council</p>
+                    <a href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
+                </div>
+
+                <!-- Security+ -->
+                <div class="certification-item">
+                    <h4>CompTIA Security+</h4>
+                    <span class="cert-level">مستوى: مبتدئ</span>
+                    <p>شهادة أساسية في مفاهيم الأمن السيبراني، مناسبة للمبتدئين في المجال</p>
+                    <p><strong>الجهة المانحة:</strong> CompTIA</p>
+                    <a href="https://www.comptia.org/certifications/security" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
+                </div>
+
+                <!-- CISSP -->
+                <div class="certification-item">
+                    <h4>CISSP - Certified Information Systems Security Professional</h4>
+                    <span class="cert-level">مستوى: متقدم</span>
+                    <p>شهادة متقدمة في إدارة الأمن المعلوماتي، تتطلب خبرة 5 سنوات في المجال</p>
+                    <p><strong>الجهة المانحة:</strong> (ISC)²</p>
+                    <a href="https://www.isc2.org/certifications/cissp" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
+                </div>
+
+                <!-- OSCP -->
+                <div class="certification-item">
+                    <h4>OSCP - Offensive Security Certified Professional</h4>
+                    <span class="cert-level">مستوى: متقدم</span>
+                    <p>شهادة عملية في اختبار الاختراق، تتطلب اجتياز اختبار عملي لمدة 24 ساعة</p>
+                    <p><strong>الجهة المانحة:</strong> Offensive Security</p>
+                    <a href="https://www.offensive-security.com/pwk-oscp/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
+                </div>
+
+                <!-- CISM -->
+                <div class="certification-item">
+                    <h4>CISM - Certified Information Security Manager</h4>
+                    <span class="cert-level">مستوى: إداري</span>
+                    <p>شهادة متخصصة في إدارة أمن المعلومات للمديرين والقادة في المجال</p>
+                    <p><strong>الجهة المانحة:</strong> ISACA</p>
+                    <a href="https://www.isaca.org/credentialing/cism" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
+                </div>
+
+                <!-- GPEN -->
+                <div class="certification-item">
+                    <h4>GPEN - GIAC Penetration Tester</h4>
+                    <span class="cert-level">مستوى: متوسط إلى متقدم</span>
+                    <p>شهادة متخصصة في اختبار الاختراق من SANS Institute</p>
+                    <p><strong>الجهة المانحة:</strong> GIAC (SANS)</p>
+                    <a href="https://www.giac.org/certifications/penetration-tester-gpen/" class="resource-link" target="_blank" style="padding: 0.5rem 1rem; font-size: 0.9rem;">التفاصيل</a>
                 </div>
             </div>
         </div>
 
     </section>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h4>روابط سريعة</h4>
-                    <ul class="footer-links">
-                        <li><a href="#home">🏠 الرئيسية</a></li>
-                        <li><a href="#courses">🎓 مصادر تعليمية</a></li>
-                        <li><a href="#tools">🛠️ أدوات مجانية</a></li>
-                        <li><a href="#labs">🔬 مختبرات تفاعلية</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>مواقع رسمية</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://portswigger.net" target="_blank">PortSwigger</a></li>
-                        <li><a href="https://tryhackme.com" target="_blank">TryHackMe</a></li>
-                        <li><a href="https://hackthebox.com" target="_blank">HackTheBox</a></li>
-                        <li><a href="https://owasp.org" target="_blank">OWASP</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>مصادر عربية</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">منصة سايبر العربية</a></li>
-                        <li><a href="#">مدونة الأمن السيبراني</a></li>
-                        <li><a href="#">مجتمع القرصنة الأخلاقية</a></li>
-                        <li><a href="#">دورات عربية مجانية</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>اتصل بنا</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:info@drprocess.com">📧 البريد الإلكتروني</a></li>
-                        <li><a href="#">📞 الدعم الفني</a></li>
-                        <li><a href="#">💬 اقتراحات</a></li>
-                        <li><a href="#">📋 الإبلاغ عن خطأ</a></li>
-                    </ul>
-                </div>
+            <div class="footer-links">
+                <a href="https://dr-process.github.io/policy.html">سياسة الاستخدام</a>
+                <a href="https://dr-process.github.io/QA.html">الأسئلة الشائعة</a>
+                <a href="https://dr-process.github.io/contact.html">اتصل بنا</a>
             </div>
-            
-<div class="social-links">
+            <div class="social-links">
     <a href="https://www.youtube.com/drprocess" title="YouTube">
         <img src="https://raw.githubusercontent.com/dr-process/dr-process.github.io/refs/heads/main/youtube.png" 
              alt="YouTube" 
@@ -1113,9 +1256,7 @@
         transform: scale(1.1);
     }
 </style>
-            
-            <p class="copyright">© 2024 Dr Process Academy. جميع المصادر الخارجية مملوكة لأصحابها الأصليين.<br>
-            تم تصميم هذه الصفحة لجمع وتنظيم أفضل مصادر الأمن السيبراني للمجتمع العربي.</p>
+            <p class="copyright">© 2026 Dr Process Academy. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
@@ -1199,47 +1340,6 @@
             });
         });
 
-        // Search Functionality
-        const searchInput = document.querySelector('.search-input');
-        const searchBtn = document.querySelector('.search-btn');
-
-        function performSearch() {
-            const searchTerm = searchInput.value.toLowerCase();
-            
-            resourceCards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const description = card.querySelector('p').textContent.toLowerCase();
-                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
-                
-                if (title.includes(searchTerm) || 
-                    description.includes(searchTerm) || 
-                    tags.some(tag => tag.includes(searchTerm))) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeIn 0.5s ease-out';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            // Show all section when searching
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            document.querySelector('[data-category="all"]').classList.add('active');
-            categorySections.forEach(section => {
-                if (section.id === 'all') {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
-        }
-
-        searchBtn.addEventListener('click', performSearch);
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
-
         // Smooth Scroll for Navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1269,21 +1369,11 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.resource-card, .featured-card').forEach(el => {
+        document.querySelectorAll('.resource-card, .featured-card, .challenge-item, .news-item-card, .certification-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
-        });
-
-        // Ticker hover pause
-        const ticker = document.querySelector('.ticker-content');
-        ticker.addEventListener('mouseenter', () => {
-            ticker.style.animationPlayState = 'paused';
-        });
-        
-        ticker.addEventListener('mouseleave', () => {
-            ticker.style.animationPlayState = 'running';
         });
     </script>
 </body>
