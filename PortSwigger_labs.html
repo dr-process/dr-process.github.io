@@ -250,6 +250,19 @@
             color: var(--primary-green);
         }
 
+        .video-link[href="#"] {
+            color: var(--text-secondary);
+            cursor: not-allowed;
+        }
+
+        .video-link[href="#"]:hover {
+            color: var(--text-secondary);
+            background: rgba(0, 217, 255, 0.05);
+            border-color: var(--border-color);
+            transform: none;
+            box-shadow: none;
+        }
+
         .divider {
             text-align: center;
             color: var(--primary-green);
@@ -690,6 +703,691 @@
                 <div class="video-links">
                     <a href="https://www.youtube.com/watch?v=E9MYZbT6vc8" class="video-link" target="_blank">4. Exploiting clickjacking vulnerability to trigger DOM-based XSS</a>
                     <a href="https://www.youtube.com/watch?v=NDoRxN4vPUg" class="video-link" target="_blank">5. Multistep clickjacking</a>
+                </div>
+            </div>
+
+            <!-- DOM-based Vulnerabilities Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ DOM-based Vulnerabilities ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. DOM XSS using web messages</a>
+                    <a href="#" class="video-link">2. DOM XSS using web messages and a JavaScript URL</a>
+                    <a href="#" class="video-link">3. DOM XSS using web messages and JSON.parse</a>
+                    <a href="#" class="video-link">4. DOM-based open redirection</a>
+                    <a href="#" class="video-link">5. DOM-based cookie manipulation</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">6. Exploiting DOM clobbering to enable XSS</a>
+                    <a href="#" class="video-link">7. Clobbering DOM attributes to bypass HTML filters</a>
+                </div>
+            </div>
+
+            <!-- CORS Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Cross-origin Resource Sharing (CORS) ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. CORS vulnerability with basic origin reflection</a>
+                    <a href="#" class="video-link">2. CORS vulnerability with trusted null origin</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. CORS vulnerability with trusted insecure protocols</a>
+                </div>
+            </div>
+
+            <!-- XXE Injection Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ XML External Entity (XXE) Injection ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=mkCLpGYjIOs" class="video-link" target="_blank">1. Exploiting XXE using external entities to retrieve files</a>
+                    <a href="#" class="video-link">2. Exploiting XXE to perform SSRF attacks</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. Blind XXE with out-of-band interaction</a>
+                    <a href="#" class="video-link">4. Blind XXE with out-of-band interaction via XML parameter entities</a>
+                    <a href="#" class="video-link">5. Exploiting blind XXE to exfiltrate data using a malicious external DTD</a>
+                    <a href="#" class="video-link">6. Exploiting blind XXE to retrieve data via error messages</a>
+                    <a href="#" class="video-link">7. Exploiting XInclude to retrieve files</a>
+                    <a href="#" class="video-link">8. Exploiting XXE via image file upload</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">9. Exploiting XXE to retrieve data by repurposing a local DTD</a>
+                </div>
+            </div>
+
+            <!-- SSRF Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Server-side Request Forgery (SSRF) ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=7TYvDZCjW4c" class="video-link" target="_blank">1. Basic SSRF against the local server</a>
+                    <a href="https://www.youtube.com/watch?v=EhR6-r3s71w" class="video-link" target="_blank">2. Basic SSRF against another back-end system</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. Blind SSRF with out-of-band detection</a>
+                    <a href="#" class="video-link">4. SSRF with blacklist-based input filter</a>
+                    <a href="#" class="video-link">5. SSRF with filter bypass via open redirection vulnerability</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">6. Blind SSRF with Shellshock exploitation</a>
+                    <a href="#" class="video-link">7. SSRF with whitelist-based input filter</a>
+                </div>
+            </div>
+
+            <!-- HTTP Request Smuggling Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ HTTP Request Smuggling ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. HTTP request smuggling, confirming a CL.TE vulnerability via differential responses</a>
+                    <a href="#" class="video-link">2. HTTP request smuggling, confirming a TE.CL vulnerability via differential responses</a>
+                    <a href="#" class="video-link">3. Exploiting HTTP request smuggling to bypass front-end security controls, CL.TE vulnerability</a>
+                    <a href="#" class="video-link">4. Exploiting HTTP request smuggling to bypass front-end security controls, TE.CL vulnerability</a>
+                    <a href="#" class="video-link">5. Exploiting HTTP request smuggling to reveal front-end request rewriting</a>
+                    <a href="#" class="video-link">6. Exploiting HTTP request smuggling to capture other users' requests</a>
+                    <a href="#" class="video-link">7. Exploiting HTTP request smuggling to deliver reflected XSS</a>
+                    <a href="#" class="video-link">8. Response queue poisoning via H2.TE request smuggling</a>
+                    <a href="#" class="video-link">9. H2.CL request smuggling</a>
+                    <a href="#" class="video-link">10. HTTP/2 request smuggling via CRLF injection</a>
+                    <a href="#" class="video-link">11. HTTP/2 request splitting via CRLF injection</a>
+                    <a href="#" class="video-link">12. CL.0 request smuggling</a>
+                    <a href="#" class="video-link">13. HTTP request smuggling, basic CL.TE vulnerability</a>
+                    <a href="#" class="video-link">14. HTTP request smuggling, basic TE.CL vulnerability</a>
+                    <a href="#" class="video-link">15. HTTP request smuggling, obfuscating the TE header</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">16. Exploiting HTTP request smuggling to perform web cache poisoning</a>
+                    <a href="#" class="video-link">17. Exploiting HTTP request smuggling to perform web cache deception</a>
+                    <a href="#" class="video-link">18. Bypassing access controls via HTTP/2 request tunnelling</a>
+                    <a href="#" class="video-link">19. Web cache poisoning via HTTP/2 request tunnelling</a>
+                    <a href="#" class="video-link">20. Client-side desync</a>
+                    <a href="#" class="video-link">21. Server-side pause-based request smuggling</a>
+                </div>
+            </div>
+
+            <!-- OS Command Injection Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ OS Command Injection ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. OS command injection, simple case</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. Blind OS command injection with time delays</a>
+                    <a href="#" class="video-link">3. Blind OS command injection with output redirection</a>
+                    <a href="#" class="video-link">4. Blind OS command injection with out-of-band interaction</a>
+                    <a href="#" class="video-link">5. Blind OS command injection with out-of-band data exfiltration</a>
+                </div>
+            </div>
+
+            <!-- Server-side Template Injection Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Server-side Template Injection ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Basic server-side template injection</a>
+                    <a href="#" class="video-link">2. Basic server-side template injection (code context)</a>
+                    <a href="#" class="video-link">3. Server-side template injection using documentation</a>
+                    <a href="#" class="video-link">4. Server-side template injection in an unknown language with a documented exploit</a>
+                    <a href="#" class="video-link">5. Server-side template injection with information disclosure via user-supplied objects</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">6. Server-side template injection in a sandboxed environment</a>
+                    <a href="#" class="video-link">7. Server-side template injection with a custom exploit</a>
+                </div>
+            </div>
+
+            <!-- Path Traversal Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Path Traversal ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. File path traversal, simple case</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. File path traversal, traversal sequences blocked with absolute path bypass</a>
+                    <a href="#" class="video-link">3. File path traversal, traversal sequences stripped non-recursively</a>
+                    <a href="#" class="video-link">4. File path traversal, traversal sequences stripped with superfluous URL-decode</a>
+                    <a href="#" class="video-link">5. File path traversal, validation of start of path</a>
+                    <a href="#" class="video-link">6. File path traversal, validation of file extension with null byte bypass</a>
+                </div>
+            </div>
+
+            <!-- Access Control Vulnerabilities Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Access Control Vulnerabilities ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Unprotected admin functionality</a>
+                    <a href="#" class="video-link">2. Unprotected admin functionality with unpredictable URL</a>
+                    <a href="#" class="video-link">3. User role controlled by request parameter</a>
+                    <a href="#" class="video-link">4. User role can be modified in user profile</a>
+                    <a href="#" class="video-link">5. User ID controlled by request parameter</a>
+                    <a href="#" class="video-link">6. User ID controlled by request parameter, with unpredictable user IDs</a>
+                    <a href="#" class="video-link">7. User ID controlled by request parameter with data leakage in redirect</a>
+                    <a href="#" class="video-link">8. User ID controlled by request parameter with password disclosure</a>
+                    <a href="#" class="video-link">9. Insecure direct object references</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">10. URL-based access control can be circumvented</a>
+                    <a href="#" class="video-link">11. Method-based access control can be circumvented</a>
+                    <a href="#" class="video-link">12. Multi-step process with no access control on one step</a>
+                    <a href="#" class="video-link">13. Referer-based access control</a>
+                </div>
+            </div>
+
+            <!-- Authentication Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Authentication ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Username enumeration via different responses</a>
+                    <a href="#" class="video-link">2. 2FA simple bypass</a>
+                    <a href="#" class="video-link">3. Password reset broken logic</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">4. Username enumeration via subtly different responses</a>
+                    <a href="#" class="video-link">5. Username enumeration via response timing</a>
+                    <a href="#" class="video-link">6. Broken brute-force protection, IP block</a>
+                    <a href="#" class="video-link">7. Username enumeration via account lock</a>
+                    <a href="#" class="video-link">8. 2FA broken logic</a>
+                    <a href="#" class="video-link">9. Brute-forcing a stay-logged-in cookie</a>
+                    <a href="#" class="video-link">10. Offline password cracking</a>
+                    <a href="#" class="video-link">11. Password reset poisoning via middleware</a>
+                    <a href="#" class="video-link">12. Password brute-force via password change</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">13. Broken brute-force protection, multiple credentials per request</a>
+                    <a href="#" class="video-link">14. 2FA bypass using a brute-force attack</a>
+                </div>
+            </div>
+
+            <!-- WebSockets Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ WebSockets ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=96b9EeKWJgo" class="video-link" target="_blank">1. Manipulating WebSocket messages to exploit vulnerabilities</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. Cross-site WebSocket hijacking</a>
+                    <a href="#" class="video-link">3. Manipulating the WebSocket handshake to exploit vulnerabilities</a>
+                </div>
+            </div>
+
+            <!-- Web Cache Poisoning Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Web Cache Poisoning ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Web cache poisoning with an unkeyed header</a>
+                    <a href="#" class="video-link">2. Web cache poisoning with an unkeyed cookie</a>
+                    <a href="#" class="video-link">3. Web cache poisoning with multiple headers</a>
+                    <a href="#" class="video-link">4. Targeted web cache poisoning using an unknown header</a>
+                    <a href="#" class="video-link">5. Web cache poisoning via an unkeyed query string</a>
+                    <a href="#" class="video-link">6. Web cache poisoning via an unkeyed query parameter</a>
+                    <a href="#" class="video-link">7. Parameter cloaking</a>
+                    <a href="#" class="video-link">8. Web cache poisoning via a fat GET request</a>
+                    <a href="#" class="video-link">9. URL normalization</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">10. Web cache poisoning to exploit a DOM vulnerability via a cache with strict cacheability criteria</a>
+                    <a href="#" class="video-link">11. Combining web cache poisoning vulnerabilities</a>
+                    <a href="#" class="video-link">12. Cache key injection</a>
+                    <a href="#" class="video-link">13. Internal cache poisoning</a>
+                </div>
+            </div>
+
+            <!-- Insecure Deserialization Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Insecure Deserialization ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Modifying serialized objects</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. Modifying serialized data types</a>
+                    <a href="#" class="video-link">3. Using application functionality to exploit insecure deserialization</a>
+                    <a href="#" class="video-link">4. Arbitrary object injection in PHP</a>
+                    <a href="#" class="video-link">5. Exploiting Java deserialization with Apache Commons</a>
+                    <a href="#" class="video-link">6. Exploiting PHP deserialization with a pre-built gadget chain</a>
+                    <a href="#" class="video-link">7. Exploiting Ruby deserialization using a documented gadget chain</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">8. Developing a custom gadget chain for Java deserialization</a>
+                    <a href="#" class="video-link">9. Developing a custom gadget chain for PHP deserialization</a>
+                    <a href="#" class="video-link">10. Using PHAR deserialization to deploy a custom gadget chain</a>
+                </div>
+            </div>
+
+            <!-- Information Disclosure Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Information Disclosure ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Information disclosure in error messages</a>
+                    <a href="#" class="video-link">2. Information disclosure on debug page</a>
+                    <a href="#" class="video-link">3. Source code disclosure via backup files</a>
+                    <a href="#" class="video-link">4. Authentication bypass via information disclosure</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">5. Information disclosure in version control history</a>
+                </div>
+            </div>
+
+            <!-- Business Logic Vulnerabilities Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Business Logic Vulnerabilities ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Excessive trust in client-side controls</a>
+                    <a href="#" class="video-link">2. High-level logic vulnerability</a>
+                    <a href="#" class="video-link">3. Inconsistent security controls</a>
+                    <a href="#" class="video-link">4. Flawed enforcement of business rules</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">5. Low-level logic flaw</a>
+                    <a href="#" class="video-link">6. Inconsistent handling of exceptional input</a>
+                    <a href="#" class="video-link">7. Weak isolation on dual-use endpoint</a>
+                    <a href="#" class="video-link">8. Insufficient workflow validation</a>
+                    <a href="#" class="video-link">9. Authentication bypass via flawed state machine</a>
+                    <a href="#" class="video-link">10. Infinite money logic flaw</a>
+                    <a href="#" class="video-link">11. Authentication bypass via encryption oracle</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">12. Bypassing access controls using email address parsing discrepancies</a>
+                </div>
+            </div>
+
+            <!-- HTTP Host Header Attacks Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ HTTP Host Header Attacks ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=gDmyuSBoKh4" class="video-link" target="_blank">1. Basic password reset poisoning</a>
+                    <a href="https://www.youtube.com/watch?v=QCA67Ev8SIc" class="video-link" target="_blank">2. Host header authentication bypass</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. Web cache poisoning via ambiguous requests</a>
+                    <a href="#" class="video-link">4. Routing-based SSRF</a>
+                    <a href="#" class="video-link">5. SSRF via flawed request parsing</a>
+                    <a href="#" class="video-link">6. Host validation bypass via connection state attack</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">7. Password reset poisoning via dangling markup</a>
+                </div>
+            </div>
+
+            <!-- OAuth Authentication Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ OAuth Authentication ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Authentication bypass via OAuth implicit flow</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. SSRF via OpenID dynamic client registration</a>
+                    <a href="#" class="video-link">3. Forced OAuth profile linking</a>
+                    <a href="#" class="video-link">4. OAuth account hijacking via redirect_uri</a>
+                    <a href="#" class="video-link">5. Stealing OAuth access tokens via an open redirect</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">6. Stealing OAuth access tokens via a proxy page</a>
+                </div>
+            </div>
+
+            <!-- File Upload Vulnerabilities Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ File Upload Vulnerabilities ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Remote code execution via web shell upload</a>
+                    <a href="#" class="video-link">2. Web shell upload via Content-Type restriction bypass</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. Web shell upload via path traversal</a>
+                    <a href="#" class="video-link">4. Web shell upload via extension blacklist bypass</a>
+                    <a href="#" class="video-link">5. Web shell upload via obfuscated file extension</a>
+                    <a href="#" class="video-link">6. Remote code execution via polyglot web shell upload</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">7. Web shell upload via race condition</a>
+                </div>
+            </div>
+
+            <!-- JWT Attacks Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ JWT Attacks ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. JWT authentication bypass via unverified signature</a>
+                    <a href="#" class="video-link">2. JWT authentication bypass via flawed signature verification</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. JWT authentication bypass via weak signing key</a>
+                    <a href="#" class="video-link">4. JWT authentication bypass via jwk header injection</a>
+                    <a href="#" class="video-link">5. JWT authentication bypass via jku header injection</a>
+                    <a href="#" class="video-link">6. JWT authentication bypass via kid header path traversal</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">7. JWT authentication bypass via algorithm confusion</a>
+                    <a href="#" class="video-link">8. JWT authentication bypass via algorithm confusion with no exposed key</a>
+                </div>
+            </div>
+
+            <!-- Essential Skills Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Essential Skills ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Discovering vulnerabilities quickly with targeted scanning</a>
+                    <a href="#" class="video-link">2. Scanning non-standard data structures</a>
+                </div>
+            </div>
+
+            <!-- Prototype Pollution Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Prototype Pollution ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Client-side prototype pollution via browser APIs</a>
+                    <a href="#" class="video-link">2. DOM XSS via client-side prototype pollution</a>
+                    <a href="#" class="video-link">3. DOM XSS via an alternative prototype pollution vector</a>
+                    <a href="#" class="video-link">4. Client-side prototype pollution via flawed sanitization</a>
+                    <a href="#" class="video-link">5. Client-side prototype pollution in third-party libraries</a>
+                    <a href="#" class="video-link">6. Privilege escalation via server-side prototype pollution</a>
+                    <a href="#" class="video-link">7. Detecting server-side prototype pollution without polluted property reflection</a>
+                    <a href="#" class="video-link">8. Bypassing flawed input filters for server-side prototype pollution</a>
+                    <a href="#" class="video-link">9. Remote code execution via server-side prototype pollution</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">10. Exfiltrating sensitive data via server-side prototype pollution</a>
+                </div>
+            </div>
+
+            <!-- GraphQL API Vulnerabilities Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ GraphQL API Vulnerabilities ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=lR7erdbiklU" class="video-link" target="_blank">1. Accessing private GraphQL posts</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="https://www.youtube.com/watch?v=9GQu9NNBEZw" class="video-link" target="_blank">2. Accidental exposure of private GraphQL fields</a>
+                    <a href="https://www.youtube.com/watch?v=uMlyyeLN4sM" class="video-link" target="_blank">3. Finding a hidden GraphQL endpoint</a>
+                    <a href="https://www.youtube.com/watch?v=1lodAr6iJOM" class="video-link" target="_blank">4. Bypassing GraphQL brute force protections</a>
+                    <a href="#" class="video-link">5. Performing CSRF exploits over GraphQL</a>
+                </div>
+            </div>
+
+            <!-- Race Conditions Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Race Conditions ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Limit overrun race conditions</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. Bypassing rate limits via race conditions</a>
+                    <a href="#" class="video-link">3. Multi-endpoint race conditions</a>
+                    <a href="#" class="video-link">4. Single-endpoint race conditions</a>
+                    <a href="#" class="video-link">5. Exploiting time-sensitive vulnerabilities</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">6. Partial construction race conditions</a>
+                </div>
+            </div>
+
+            <!-- NoSQL Injection Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ NoSQL Injection ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Detecting NoSQL injection</a>
+                    <a href="#" class="video-link">2. Exploiting NoSQL operator injection to bypass authentication</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">3. Exploiting NoSQL injection to extract data</a>
+                    <a href="#" class="video-link">4. Exploiting NoSQL operator injection to extract unknown fields</a>
+                </div>
+            </div>
+
+            <!-- API Testing Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ API Testing ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Exploiting an API endpoint using documentation</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. Exploiting server-side parameter pollution in a query string</a>
+                    <a href="#" class="video-link">3. Finding and exploiting an unused API endpoint</a>
+                    <a href="#" class="video-link">4. Exploiting a mass assignment vulnerability</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">5. Exploiting server-side parameter pollution in a REST URL</a>
+                </div>
+            </div>
+
+            <!-- Web LLM Attacks Section -->
+            <div class="content-block">
+                <div class="divider">🔥┌───────────────────────🔥</div>
+                <div class="category-header">
+                    <h4>🛡️ [ Web LLM Attacks ] 🛡️</h4>
+                </div>
+                <div class="divider">🔒└───────────────────────🔒</div>
+                
+                <h4><span class="level-badge apprentice">🟢 APPRENTICE (مبتدئ)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">1. Exploiting LLM APIs with excessive agency</a>
+                </div>
+
+                <h4><span class="level-badge practitioner">🔵 PRACTITIONER (متوسط)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">2. Exploiting vulnerabilities in LLM APIs</a>
+                    <a href="#" class="video-link">3. Indirect prompt injection</a>
+                </div>
+
+                <h4><span class="level-badge expert">🔴 EXPERT (متقدم)</span></h4>
+                <div class="video-links">
+                    <a href="#" class="video-link">4. Exploiting insecure output handling in LLMs</a>
                 </div>
             </div>
 
