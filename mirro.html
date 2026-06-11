@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIRROR | متجر الفخامة</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --deep: #111111;
+    --card: #181818;
+    --border: #2a2a2a;
+    --silver: #c8c8c8;
+    --silver-light: #e8e8e8;
+    --white: #f5f5f5;
+    --accent: #b8a882;
+    --accent-light: #d4c9b0;
+    --text-muted: #888;
+    --radius: 2px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--silver-light);
+    font-family: 'Cairo', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-logo span {
+    font-size: 11px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 300;
+    color: var(--accent);
+    letter-spacing: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent-light); }
+
+  .nav-cart {
+    background: var(--accent);
+    color: var(--black);
+    border: none;
+    padding: 10px 22px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+    border-radius: var(--radius);
+  }
+
+  .nav-cart:hover { background: var(--accent-light); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 40%, #1e1c19 0%, #0a0a0a 100%);
+  }
+
+  /* mirror reflection grid lines */
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(to bottom, transparent 49.5%, rgba(184,168,130,0.07) 49.5%, rgba(184,168,130,0.07) 50.5%, transparent 50.5%),
+      linear-gradient(to right, transparent 49.5%, rgba(184,168,130,0.07) 49.5%, rgba(184,168,130,0.07) 50.5%, transparent 50.5%);
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 780px;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    font-weight: 400;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(64px, 12vw, 130px);
+    font-weight: 900;
+    letter-spacing: 12px;
+    line-height: 1;
+    color: var(--white);
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Mirror reflection of title */
+  .hero-title::after {
+    content: 'MIRROR';
+    display: block;
+    transform: scaleY(-1);
+    background: linear-gradient(to bottom, rgba(245,245,245,0.35) 0%, transparent 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 4px;
+    filter: blur(0.5px);
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .hero-sub {
+    margin-top: 36px;
+    font-size: 15px;
+    color: var(--silver);
+    line-height: 2;
+    font-weight: 300;
+  }
+
+  .hero-sub strong {
+    color: var(--accent-light);
+    font-weight: 600;
+  }
+
+  .hero-badges {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    border: 1px solid var(--border);
+    padding: 7px 18px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--silver);
+    font-weight: 400;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .badge .icon { font-size: 14px; }
+
+  .hero-cta {
+    margin-top: 44px;
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--accent);
+    color: var(--black);
+    border: none;
+    padding: 16px 44px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s;
+    border-radius: var(--radius);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--silver-light);
+    border: 1px solid var(--border);
+    padding: 16px 44px;
+    font-family: 'Cairo', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.25s;
+    border-radius: var(--radius);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+  }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--deep);
+    padding: 14px 0;
+    white-space: nowrap;
+  }
+
+  .marquee-track {
+    display: inline-block;
+    animation: marquee 22s linear infinite;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .marquee-track span { margin: 0 40px; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 40px; max-width: 1200px; margin: 0 auto; }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  /* ── CATEGORIES ── */
+  .cats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .cat-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    group: true;
+    border-radius: var(--radius);
+  }
+
+  .cat-card:first-child {
+    grid-row: span 2;
+  }
+
+  .cat-visual {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+    transition: transform 0.5s ease;
+    position: relative;
+  }
+
+  .cat-card:first-child .cat-visual {
+    aspect-ratio: unset;
+    height: 100%;
+    min-height: 420px;
+    font-size: 100px;
+  }
+
+  .cat-card:hover .cat-visual { transform: scale(1.04); }
+
+  .cat-bg-1 { background: linear-gradient(145deg, #1a1714 0%, #2d2820 100%); }
+  .cat-bg-2 { background: linear-gradient(145deg, #141619 0%, #1e2228 100%); }
+  .cat-bg-3 { background: linear-gradient(145deg, #141414 0%, #1c1c1c 100%); }
+
+  .cat-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+  }
+
+  .cat-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .cat-count {
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 2px;
+  }
+
+  /* ── PRODUCTS ── */
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.25s, transform 0.25s;
+  }
+
+  .product-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+  }
+
+  .product-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    background: linear-gradient(145deg, #1a1a1a, #222);
+    position: relative;
+  }
+
+  .product-tag {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--accent);
+    color: var(--black);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    letter-spacing: 1px;
+    border-radius: var(--radius);
+  }
+
+  .product-info {
+    padding: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  .product-brand {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-light);
+    letter-spacing: 1px;
+  }
+
+  .product-price small {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 300;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .btn-add {
+    background: var(--border);
+    border: none;
+    color: var(--silver);
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-add:hover { background: var(--accent); color: var(--black); }
+
+  /* ── SHIPPING BANNER ── */
+  .shipping-banner {
+    background: var(--deep);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 60px 40px;
+    text-align: center;
+    margin: 0 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shipping-banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+  }
+
+  .shipping-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    margin-top: 44px;
+  }
+
+  .ship-item { text-align: center; }
+
+  .ship-icon { font-size: 32px; margin-bottom: 10px; }
+
+  .ship-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .ship-desc { font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .review-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    position: relative;
+  }
+
+  .review-stars { color: var(--accent); font-size: 13px; margin-bottom: 14px; letter-spacing: 2px; }
+
+  .review-text {
+    font-size: 14px;
+    color: var(--silver);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .review-avatar {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: 1px solid var(--accent);
+  }
+
+  .review-name { font-size: 13px; font-weight: 700; color: var(--white); }
+  .review-location { font-size: 11px; color: var(--text-muted); }
+
+  /* ── INSTAGRAM ── */
+  .insta-section {
+    text-align: center;
+    padding: 80px 40px;
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+  }
+
+  .insta-section .section-label { margin-bottom: 8px; }
+
+  .insta-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  .insta-handle {
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 44px;
+    letter-spacing: 2px;
+  }
+
+  .insta-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .insta-item {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: opacity 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .insta-item:hover { opacity: 0.75; }
+
+  .ig1 { background: linear-gradient(145deg, #1c1814, #2a2218); }
+  .ig2 { background: linear-gradient(145deg, #141618, #1c2028); }
+  .ig3 { background: linear-gradient(145deg, #181616, #241e1e); }
+  .ig4 { background: linear-gradient(145deg, #141818, #1c2424); }
+  .ig5 { background: linear-gradient(145deg, #1a1a14, #242418); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    padding: 60px 40px 30px;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 60px;
+  }
+
+  .footer-brand h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: var(--white);
+    margin-bottom: 14px;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 2;
+  }
+
+  .footer-brand .social {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .social a {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--silver);
+    text-decoration: none;
+    font-size: 14px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .social a:hover { border-color: var(--accent); color: var(--accent); }
+
+  .footer-col h4 {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul a {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--silver-light); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p { font-size: 12px; color: var(--text-muted); }
+
+  .countries {
+    display: flex;
+    gap: 8px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+
+  .country-flag {
+    font-size: 18px;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+    cursor: default;
+  }
+
+  .country-flag:hover { opacity: 1; }
+
+  /* ── FULL-WIDTH BACKGROUND ── */
+  .full-bg { max-width: none; padding: 0; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    nav { padding: 16px 20px; }
+    .nav-links { display: none; }
+    section { padding: 60px 20px; }
+    .cats { grid-template-columns: 1fr 1fr; }
+    .cat-card:first-child { grid-row: span 1; }
+    .shipping-grid { grid-template-columns: 1fr 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    .shipping-banner { margin: 0 20px; padding: 40px 20px; }
+  }
+
+  @media (max-width: 600px) {
+    .cats { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .insta-grid { grid-template-columns: repeat(3, 1fr); }
+    .shipping-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 56px; letter-spacing: 8px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    MIRROR
+    <span>BHR ✦</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#categories">الأقسام</a></li>
+    <li><a href="#products">المنتجات</a></li>
+    <li><a href="#shipping">الشحن</a></li>
+    <li><a href="#reviews">آراء العملاء</a></li>
+  </ul>
+  <button class="nav-cart">🛍 تواصل معنا</button>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Personal Shopper &nbsp;•&nbsp; الخليج العربي ✦</p>
+    <h1 class="hero-title">MIRROR</h1>
+    <p class="hero-sub">
+      مستمرون في تقديم <strong>الفخامة ✨</strong><br>
+      شنط · أحذية · ساعات
+    </p>
+    <div class="hero-badges">
+      <div class="badge"><span class="icon">✈️</span> شحن لجميع دول الخليج</div>
+      <div class="badge"><span class="icon">📦</span> تغليف فاخر</div>
+      <div class="badge"><span class="icon">💎</span> أصالة مضمونة</div>
+    </div>
+    <div class="hero-cta">
+      <a href="#products" class="btn-primary">تسوق الآن</a>
+      <a href="https://www.instagram.com/mirror.bhr" class="btn-outline" target="_blank">تواصل معنا</a>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>LUXURY BAGS</span>
+    <span>✦</span>
+    <span>DESIGNER SHOES</span>
+    <span>✦</span>
+    <span>PREMIUM WATCHES</span>
+    <span>✦</span>
+    <span>GULF SHIPPING</span>
+    <span>✦</span>
+    <span>AUTHENTIC ONLY</span>
+    <span>✦</span>
+    <span>LUXURY BAGS</span>
+    <span>✦</span>
+    <span>DESIGNER SHOES</span>
+    <span>✦</span>
+    <span>PREMIUM WATCHES</span>
+    <span>✦</span>
+    <span>GULF SHIPPING</span>
+    <span>✦</span>
+    <span>AUTHENTIC ONLY</span>
+    <span>✦</span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="section-header">
+    <p class="section-label">تصفح حسب الفئة</p>
+    <h2 class="section-title">كل ما هو فاخر</h2>
+  </div>
+  <div class="cats">
+    <div class="cat-card">
+      <div class="cat-visual cat-bg-1">👜</div>
+      <div class="cat-overlay">
+        <div class="cat-name">الشنط الفاخرة</div>
+        <div class="cat-count">BAGS & ACCESSORIES</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-visual cat-bg-2">👠</div>
+      <div class="cat-overlay">
+        <div class="cat-name">الأحذية</div>
+        <div class="cat-count">DESIGNER FOOTWEAR</div>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-visual cat-bg-3">⌚</div>
+      <div class="cat-overlay">
+        <div class="cat-name">الساعات</div>
+        <div class="cat-count">LUXURY TIMEPIECES</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-header">
+    <p class="section-label">أحدث الوصولات</p>
+    <h2 class="section-title">New Arrivals</h2>
+  </div>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-img">
+        <span>👜</span>
+        <div class="product-tag">جديد</div>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Louis Vuitton</div>
+        <div class="product-name">Neverfull MM Monogram</div>
+        <div class="product-footer">
+          <div class="product-price">
+            <small>١٢٠٠ د.ب</small>
+            ٩٨٠ د.ب
+          </div>
+          <button class="btn-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <span>👛</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Chanel</div>
+        <div class="product-name">Classic Flap Medium</div>
+        <div class="product-footer">
+          <div class="product-price">٢٤٥٠ د.ب</div>
+          <button class="btn-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <span>👠</span>
+        <div class="product-tag">حصري</div>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Christian Louboutin</div>
+        <div class="product-name">So Kate 120mm Pumps</div>
+        <div class="product-footer">
+          <div class="product-price">٥٢٠ د.ب</div>
+          <button class="btn-add">+</button>
+        </div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <span>⌚</span>
+      </div>
+      <div class="product-info">
+        <div class="product-brand">Rolex</div>
+        <div class="product-name">Datejust 41 Silver Dial</div>
+        <div class="product-footer">
+          <div class="product-price">
+            <small>١٢٠٠٠ د.ب</small>
+            ١٠٨٠٠ د.ب
+          </div>
+          <button class="btn-add">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SHIPPING BANNER -->
+<div class="shipping-banner full-bg" id="shipping">
+  <p class="section-label">لماذا MIRROR</p>
+  <h2 class="section-title">تجربة تسوق لا مثيل لها</h2>
+  <div class="shipping-grid">
+    <div class="ship-item">
+      <div class="ship-icon">✈️</div>
+      <div class="ship-title">شحن الخليج</div>
+      <div class="ship-desc">نشحن لجميع دول الخليج العربي الست بسرعة وأمان</div>
+    </div>
+    <div class="ship-item">
+      <div class="ship-icon">💎</div>
+      <div class="ship-title">أصالة مضمونة</div>
+      <div class="ship-desc">كل قطعة أصلية 100% مع ضمان كامل</div>
+    </div>
+    <div class="ship-item">
+      <div class="ship-icon">📦</div>
+      <div class="ship-title">تغليف فاخر</div>
+      <div class="ship-desc">تغليف يليق بمستوى المنتج لتجربة فتح مميزة</div>
+    </div>
+    <div class="ship-item">
+      <div class="ship-icon">💬</div>
+      <div class="ship-title">دعم مباشر</div>
+      <div class="ship-desc">تواصل معنا في أي وقت للمساعدة والاستفسار</div>
+    </div>
+  </div>
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-header">
+    <p class="section-label">آراء عملائنا</p>
+    <h2 class="section-title">ثقة حقيقية</h2>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">شنطة Chanel وصلت بحالة ممتازة، التغليف فاخر جداً والخدمة احترافية من أول رسالة لآخر لحظة. تجربة استثنائية!</p>
+      <div class="review-author">
+        <div class="review-avatar">👩</div>
+        <div>
+          <div class="review-name">نورة الرشيد</div>
+          <div class="review-location">الرياض، السعودية 🇸🇦</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">ساعة Rolex كانت بالضبط كما في الصورة، أصلية 100%. خدمة الشحن كانت سريعة والفريق متعاون جداً.</p>
+      <div class="review-author">
+        <div class="review-avatar">👨</div>
+        <div>
+          <div class="review-name">خالد المنصوري</div>
+          <div class="review-location">دبي، الإمارات 🇦🇪</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">أفضل متجر Personal Shopper في الخليج. الأسعار منافسة والمنتجات مضمونة. أنصح بشدة!</p>
+      <div class="review-author">
+        <div class="review-avatar">👩</div>
+        <div>
+          <div class="review-name">لولوة العازمي</div>
+          <div class="review-location">الكويت 🇰🇼</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<div class="insta-section">
+  <p class="section-label">تابعنا</p>
+  <h3>Follow Us on Instagram</h3>
+  <p class="insta-handle">@mirror.bhr</p>
+  <div class="insta-grid">
+    <div class="insta-item ig1">👜</div>
+    <div class="insta-item ig2">⌚</div>
+    <div class="insta-item ig3">👠</div>
+    <div class="insta-item ig4">👛</div>
+    <div class="insta-item ig5">💍</div>
+  </div>
+  <br><br>
+  <a href="https://www.instagram.com/mirror.bhr" class="btn-primary" target="_blank" style="font-size:13px;">
+    📸 &nbsp; زيارة حسابنا
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>MIRROR</h2>
+      <p>مستمرون في تقديم الفخامة ✨<br>Personal Shopper | شنط | أحذية | ساعات<br>شحن لجميع دول الخليج</p>
+      <div class="social">
+        <a href="https://www.instagram.com/mirror.bhr" target="_blank" title="Instagram">📸</a>
+        <a href="#" title="WhatsApp">💬</a>
+        <a href="#" title="Snapchat">👻</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>الأقسام</h4>
+      <ul>
+        <li><a href="#">الشنط الفاخرة</a></li>
+        <li><a href="#">الأحذية</a></li>
+        <li><a href="#">الساعات</a></li>
+        <li><a href="#">New Arrivals</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>خدماتنا</h4>
+      <ul>
+        <li><a href="#">Personal Shopper</a></li>
+        <li><a href="#">الشحن للخليج</a></li>
+        <li><a href="#">ضمان الأصالة</a></li>
+        <li><a href="#">تغليف فاخر</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل معنا</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/mirror.bhr" target="_blank">Instagram</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Snapchat</a></li>
+        <li><a href="#">البريد الإلكتروني</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 MIRROR — جميع الحقوق محفوظة</p>
+    <div class="countries">
+      <span class="country-flag" title="البحرين">🇧🇭</span>
+      <span class="country-flag" title="السعودية">🇸🇦</span>
+      <span class="country-flag" title="الإمارات">🇦🇪</span>
+      <span class="country-flag" title="الكويت">🇰🇼</span>
+      <span class="country-flag" title="قطر">🇶🇦</span>
+      <span class="country-flag" title="عُمان">🇴🇲</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Smooth active nav highlight
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--accent-light)'
+        : '';
+    });
+  });
+
+  // Add to cart feedback
+  document.querySelectorAll('.btn-add').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.textContent = '✓';
+      this.style.background = 'var(--accent)';
+      this.style.color = 'var(--black)';
+      setTimeout(() => {
+        this.textContent = '+';
+        this.style.background = '';
+        this.style.color = '';
+      }, 1200);
+    });
+  });
+</script>
+</body>
+</html>
